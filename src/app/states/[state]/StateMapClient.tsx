@@ -24,7 +24,11 @@ export function StateMapClient({ locations, center, zoom, stateName, count }: Pr
   const [typeFilter, setTypeFilter] = useState('all');
 
   const filtered = locations.filter((l) => {
-    if (typeFilter !== 'all' && l.type !== typeFilter) return false;
+    if (typeFilter !== 'all') {
+      if (typeFilter === 'etabs') {
+        if (!l.hasBingo) return false;
+      } else if (l.type !== typeFilter) return false;
+    }
     if (query) {
       const q = query.toLowerCase();
       return (
@@ -39,6 +43,7 @@ export function StateMapClient({ locations, center, zoom, stateName, count }: Pr
   const typeCounts: Record<string, number> = { all: locations.length };
   locations.forEach((l) => {
     typeCounts[l.type] = (typeCounts[l.type] || 0) + 1;
+    if (l.hasBingo) typeCounts['etabs'] = (typeCounts['etabs'] || 0) + 1;
   });
 
   return (

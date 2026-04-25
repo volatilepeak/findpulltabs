@@ -38,6 +38,7 @@ export const VENUE_TYPES: Record<string, { label: string; icon: string; color: s
 
 export const FILTER_PILLS = [
   { key: 'all', label: 'All', icon: '📍' },
+  { key: 'etabs', label: 'E-Tabs', icon: '🎰' },
   { key: 'bar-restaurant', label: 'Bars', icon: '🍺' },
   { key: 'vfw', label: 'VFW', icon: '⭐' },
   { key: 'american-legion', label: 'Am. Legion', icon: '🦅' },
@@ -110,7 +111,11 @@ export function searchLocations(query: string, stateFilter?: string, typeFilter?
   }
 
   if (typeFilter && typeFilter !== 'all') {
-    results = results.filter((l) => l.type === typeFilter);
+    if (typeFilter === 'etabs') {
+      results = results.filter((l) => l.hasBingo);
+    } else {
+      results = results.filter((l) => l.type === typeFilter);
+    }
   }
 
   if (q) {

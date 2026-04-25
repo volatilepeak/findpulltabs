@@ -31,6 +31,7 @@ export default function HomePage() {
     const counts: Record<string, number> = { all: base.length };
     base.forEach((l) => {
       counts[l.type] = (counts[l.type] || 0) + 1;
+      if (l.hasBingo) counts['etabs'] = (counts['etabs'] || 0) + 1;
     });
     return counts;
   }, [query]);
