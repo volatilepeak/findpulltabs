@@ -1,0 +1,4878 @@
+{
+  "mn": {
+    "fridley": {
+      "name": "Fridley",
+      "count": 6
+    },
+    "lino-lakes": {
+      "name": "Lino Lakes",
+      "count": 5
+    },
+    "lexington": {
+      "name": "Lexington",
+      "count": 2
+    },
+    "detroit-lakes": {
+      "name": "Detroit Lakes",
+      "count": 16
+    },
+    "perham-twp": {
+      "name": "Perham Twp",
+      "count": 2
+    },
+    "cormorant-twp": {
+      "name": "Cormorant Twp",
+      "count": 4
+    },
+    "coon-rapids": {
+      "name": "Coon Rapids",
+      "count": 12
+    },
+    "anoka": {
+      "name": "Anoka",
+      "count": 8
+    },
+    "columbia-heights": {
+      "name": "Columbia Heights",
+      "count": 7
+    },
+    "north-st-paul": {
+      "name": "North St. Paul",
+      "count": 7
+    },
+    "roseville": {
+      "name": "Roseville",
+      "count": 5
+    },
+    "zumbrota": {
+      "name": "Zumbrota",
+      "count": 4
+    },
+    "cannon-falls": {
+      "name": "Cannon Falls",
+      "count": 4
+    },
+    "welch": {
+      "name": "Welch",
+      "count": 1
+    },
+    "cannon-falls-twp": {
+      "name": "Cannon Falls Twp",
+      "count": 1
+    },
+    "dilworth": {
+      "name": "Dilworth",
+      "count": 4
+    },
+    "glyndon": {
+      "name": "Glyndon",
+      "count": 2
+    },
+    "moorhead": {
+      "name": "Moorhead",
+      "count": 7
+    },
+    "sabin": {
+      "name": "Sabin",
+      "count": 1
+    },
+    "redwood-falls": {
+      "name": "Redwood Falls",
+      "count": 5
+    },
+    "northfield": {
+      "name": "Northfield",
+      "count": 5
+    },
+    "mankato": {
+      "name": "Mankato",
+      "count": 22
+    },
+    "eagle-lake": {
+      "name": "Eagle Lake",
+      "count": 2
+    },
+    "alexandria": {
+      "name": "Alexandria",
+      "count": 12
+    },
+    "wells": {
+      "name": "Wells",
+      "count": 1
+    },
+    "spring-valley": {
+      "name": "Spring Valley",
+      "count": 4
+    },
+    "racine": {
+      "name": "Racine",
+      "count": 1
+    },
+    "bloomfield-twp": {
+      "name": "Bloomfield Twp",
+      "count": 1
+    },
+    "farmington": {
+      "name": "Farmington",
+      "count": 4
+    },
+    "hastings": {
+      "name": "Hastings",
+      "count": 10
+    },
+    "starbuck": {
+      "name": "Starbuck",
+      "count": 5
+    },
+    "albert-lea": {
+      "name": "Albert Lea",
+      "count": 14
+    },
+    "willmar": {
+      "name": "Willmar",
+      "count": 8
+    },
+    "rushford": {
+      "name": "Rushford",
+      "count": 5
+    },
+    "international-falls": {
+      "name": "International Falls",
+      "count": 7
+    },
+    "richfield": {
+      "name": "Richfield",
+      "count": 4
+    },
+    "twin-valley": {
+      "name": "Twin Valley",
+      "count": 1
+    },
+    "winona": {
+      "name": "Winona",
+      "count": 24
+    },
+    "hutchinson": {
+      "name": "Hutchinson",
+      "count": 10
+    },
+    "boon-lake-twp": {
+      "name": "Boon Lake Twp",
+      "count": 2
+    },
+    "granite-falls": {
+      "name": "Granite Falls",
+      "count": 2
+    },
+    "bloomington": {
+      "name": "Bloomington",
+      "count": 19
+    },
+    "austin": {
+      "name": "Austin",
+      "count": 13
+    },
+    "baudette": {
+      "name": "Baudette",
+      "count": 4
+    },
+    "plainview": {
+      "name": "Plainview",
+      "count": 4
+    },
+    "thief-river-falls": {
+      "name": "Thief River Falls",
+      "count": 9
+    },
+    "fergus-falls": {
+      "name": "Fergus Falls",
+      "count": 5
+    },
+    "pine-city": {
+      "name": "Pine City",
+      "count": 5
+    },
+    "appleton": {
+      "name": "Appleton",
+      "count": 2
+    },
+    "osseo": {
+      "name": "Osseo",
+      "count": 5
+    },
+    "walker": {
+      "name": "Walker",
+      "count": 4
+    },
+    "springfield": {
+      "name": "Springfield",
+      "count": 4
+    },
+    "maplewood": {
+      "name": "Maplewood",
+      "count": 9
+    },
+    "faribault": {
+      "name": "Faribault",
+      "count": 16
+    },
+    "inver-grove-heights": {
+      "name": "Inver Grove Heights",
+      "count": 11
+    },
+    "south-st-paul": {
+      "name": "South St. Paul",
+      "count": 6
+    },
+    "chaska": {
+      "name": "Chaska",
+      "count": 8
+    },
+    "roseau": {
+      "name": "Roseau",
+      "count": 3
+    },
+    "fairmont": {
+      "name": "Fairmont",
+      "count": 8
+    },
+    "silver-lake": {
+      "name": "Silver Lake",
+      "count": 4
+    },
+    "little-falls": {
+      "name": "Little Falls",
+      "count": 8
+    },
+    "aurora": {
+      "name": "Aurora",
+      "count": 4
+    },
+    "forest-lake": {
+      "name": "Forest Lake",
+      "count": 7
+    },
+    "menahga": {
+      "name": "Menahga",
+      "count": 2
+    },
+    "sebeka": {
+      "name": "Sebeka",
+      "count": 1
+    },
+    "eden-valley": {
+      "name": "Eden Valley",
+      "count": 4
+    },
+    "eden-lake-twp": {
+      "name": "Eden Lake Twp",
+      "count": 2
+    },
+    "waseca": {
+      "name": "Waseca",
+      "count": 10
+    },
+    "st-paul-park": {
+      "name": "St. Paul Park",
+      "count": 6
+    },
+    "mound": {
+      "name": "Mound",
+      "count": 4
+    },
+    "foley": {
+      "name": "Foley",
+      "count": 3
+    },
+    "montevideo": {
+      "name": "Montevideo",
+      "count": 6
+    },
+    "north-branch": {
+      "name": "North Branch",
+      "count": 5
+    },
+    "storden": {
+      "name": "Storden",
+      "count": 1
+    },
+    "elkton-twp": {
+      "name": "Elkton Twp",
+      "count": 1
+    },
+    "ironton": {
+      "name": "Ironton",
+      "count": 4
+    },
+    "minneapolis": {
+      "name": "Minneapolis",
+      "count": 72
+    },
+    "crystal": {
+      "name": "Crystal",
+      "count": 4
+    },
+    "cottage-grove": {
+      "name": "Cottage Grove",
+      "count": 4
+    },
+    "glencoe": {
+      "name": "Glencoe",
+      "count": 5
+    },
+    "waite-park": {
+      "name": "Waite Park",
+      "count": 7
+    },
+    "litchfield": {
+      "name": "Litchfield",
+      "count": 5
+    },
+    "ellsworth-twp": {
+      "name": "Ellsworth Twp",
+      "count": 1
+    },
+    "randall": {
+      "name": "Randall",
+      "count": 2
+    },
+    "brownsville": {
+      "name": "Brownsville",
+      "count": 2
+    },
+    "hokah": {
+      "name": "Hokah",
+      "count": 2
+    },
+    "la-crescent": {
+      "name": "La Crescent",
+      "count": 2
+    },
+    "red-lake-falls": {
+      "name": "Red Lake Falls",
+      "count": 3
+    },
+    "goodridge": {
+      "name": "Goodridge",
+      "count": 2
+    },
+    "hopkins": {
+      "name": "Hopkins",
+      "count": 8
+    },
+    "rosemount": {
+      "name": "Rosemount",
+      "count": 3
+    },
+    "st-james": {
+      "name": "St. James",
+      "count": 3
+    },
+    "worthington": {
+      "name": "Worthington",
+      "count": 5
+    },
+    "ottertail": {
+      "name": "Ottertail",
+      "count": 4
+    },
+    "henning-twp": {
+      "name": "Henning Twp",
+      "count": 1
+    },
+    "everts-twp": {
+      "name": "Everts Twp",
+      "count": 2
+    },
+    "battle-lake": {
+      "name": "Battle Lake",
+      "count": 3
+    },
+    "clitherall": {
+      "name": "Clitherall",
+      "count": 2
+    },
+    "lake-city": {
+      "name": "Lake City",
+      "count": 4
+    },
+    "garrison": {
+      "name": "Garrison",
+      "count": 5
+    },
+    "mabel": {
+      "name": "Mabel",
+      "count": 2
+    },
+    "peterson": {
+      "name": "Peterson",
+      "count": 1
+    },
+    "park-rapids": {
+      "name": "Park Rapids",
+      "count": 4
+    },
+    "shorewood": {
+      "name": "Shorewood",
+      "count": 1
+    },
+    "le-center": {
+      "name": "Le Center",
+      "count": 3
+    },
+    "brooklyn-center": {
+      "name": "Brooklyn Center",
+      "count": 1
+    },
+    "red-wing": {
+      "name": "Red Wing",
+      "count": 10
+    },
+    "marshall": {
+      "name": "Marshall",
+      "count": 8
+    },
+    "richmond-twp": {
+      "name": "Richmond Twp",
+      "count": 1
+    },
+    "lyle": {
+      "name": "Lyle",
+      "count": 2
+    },
+    "st-peter": {
+      "name": "St. Peter",
+      "count": 8
+    },
+    "kasota": {
+      "name": "Kasota",
+      "count": 2
+    },
+    "jackson": {
+      "name": "Jackson",
+      "count": 3
+    },
+    "rochester": {
+      "name": "Rochester",
+      "count": 32
+    },
+    "luverne": {
+      "name": "Luverne",
+      "count": 4
+    },
+    "morris": {
+      "name": "Morris",
+      "count": 5
+    },
+    "st-paul": {
+      "name": "St. Paul",
+      "count": 60
+    },
+    "gem-lake": {
+      "name": "Gem Lake",
+      "count": 1
+    },
+    "vadnais-heights": {
+      "name": "Vadnais Heights",
+      "count": 2
+    },
+    "afton": {
+      "name": "Afton",
+      "count": 2
+    },
+    "stillwater": {
+      "name": "Stillwater",
+      "count": 17
+    },
+    "white-bear-lake": {
+      "name": "White Bear Lake",
+      "count": 9
+    },
+    "hugo": {
+      "name": "Hugo",
+      "count": 5
+    },
+    "woodbury": {
+      "name": "Woodbury",
+      "count": 8
+    },
+    "oakdale": {
+      "name": "Oakdale",
+      "count": 4
+    },
+    "eagan": {
+      "name": "Eagan",
+      "count": 14
+    },
+    "nininger-twp": {
+      "name": "Nininger Twp",
+      "count": 1
+    },
+    "vermillion": {
+      "name": "Vermillion",
+      "count": 2
+    },
+    "grand-rapids": {
+      "name": "Grand Rapids",
+      "count": 7
+    },
+    "isanti": {
+      "name": "Isanti",
+      "count": 6
+    },
+    "millville": {
+      "name": "Millville",
+      "count": 3
+    },
+    "shakopee": {
+      "name": "Shakopee",
+      "count": 19
+    },
+    "prior-lake": {
+      "name": "Prior Lake",
+      "count": 5
+    },
+    "paynesville": {
+      "name": "Paynesville",
+      "count": 2
+    },
+    "st-augusta": {
+      "name": "St. Augusta",
+      "count": 3
+    },
+    "emmons": {
+      "name": "Emmons",
+      "count": 1
+    },
+    "argyle": {
+      "name": "Argyle",
+      "count": 2
+    },
+    "princeton": {
+      "name": "Princeton",
+      "count": 7
+    },
+    "kasota-twp": {
+      "name": "Kasota Twp",
+      "count": 5
+    },
+    "pine-island": {
+      "name": "Pine Island",
+      "count": 3
+    },
+    "northern-twp": {
+      "name": "Northern Twp",
+      "count": 2
+    },
+    "savage": {
+      "name": "Savage",
+      "count": 6
+    },
+    "ormsby": {
+      "name": "Ormsby",
+      "count": 1
+    },
+    "butterfield": {
+      "name": "Butterfield",
+      "count": 1
+    },
+    "rosendale-twp": {
+      "name": "Rosendale Twp",
+      "count": 1
+    },
+    "warren": {
+      "name": "Warren",
+      "count": 2
+    },
+    "tracy": {
+      "name": "Tracy",
+      "count": 2
+    },
+    "garvin": {
+      "name": "Garvin",
+      "count": 1
+    },
+    "delano": {
+      "name": "Delano",
+      "count": 6
+    },
+    "st-michael": {
+      "name": "St. Michael",
+      "count": 5
+    },
+    "albertville": {
+      "name": "Albertville",
+      "count": 8
+    },
+    "owatonna": {
+      "name": "Owatonna",
+      "count": 11
+    },
+    "lake-crystal": {
+      "name": "Lake Crystal",
+      "count": 2
+    },
+    "adams": {
+      "name": "Adams",
+      "count": 1
+    },
+    "adams-twp": {
+      "name": "Adams Twp",
+      "count": 1
+    },
+    "taconite": {
+      "name": "Taconite",
+      "count": 1
+    },
+    "deer-river-twp": {
+      "name": "Deer River Twp",
+      "count": 1
+    },
+    "monticello": {
+      "name": "Monticello",
+      "count": 10
+    },
+    "cloquet": {
+      "name": "Cloquet",
+      "count": 4
+    },
+    "scanlon": {
+      "name": "Scanlon",
+      "count": 5
+    },
+    "brookston": {
+      "name": "Brookston",
+      "count": 2
+    },
+    "kasson": {
+      "name": "Kasson",
+      "count": 3
+    },
+    "two-harbors": {
+      "name": "Two Harbors",
+      "count": 4
+    },
+    "wabasha": {
+      "name": "Wabasha",
+      "count": 7
+    },
+    "st-charles": {
+      "name": "St. Charles",
+      "count": 2
+    },
+    "south-harbor-twp": {
+      "name": "South Harbor Twp",
+      "count": 2
+    },
+    "osakis": {
+      "name": "Osakis",
+      "count": 6
+    },
+    "benson": {
+      "name": "Benson",
+      "count": 4
+    },
+    "st-cloud": {
+      "name": "St. Cloud",
+      "count": 28
+    },
+    "hoyt-lakes": {
+      "name": "Hoyt Lakes",
+      "count": 2
+    },
+    "cook": {
+      "name": "Cook",
+      "count": 3
+    },
+    "clearwater": {
+      "name": "Clearwater",
+      "count": 5
+    },
+    "new-york-mills": {
+      "name": "New York Mills",
+      "count": 3
+    },
+    "mapleview": {
+      "name": "Mapleview",
+      "count": 1
+    },
+    "new-ulm": {
+      "name": "New Ulm",
+      "count": 11
+    },
+    "north-mankato": {
+      "name": "North Mankato",
+      "count": 6
+    },
+    "sauk-rapids": {
+      "name": "Sauk Rapids",
+      "count": 5
+    },
+    "pipestone": {
+      "name": "Pipestone",
+      "count": 1
+    },
+    "trosky": {
+      "name": "Trosky",
+      "count": 1
+    },
+    "hatfield": {
+      "name": "Hatfield",
+      "count": 1
+    },
+    "spicer": {
+      "name": "Spicer",
+      "count": 3
+    },
+    "blue-earth": {
+      "name": "Blue Earth",
+      "count": 3
+    },
+    "verona-twp": {
+      "name": "Verona Twp",
+      "count": 1
+    },
+    "montgomery": {
+      "name": "Montgomery",
+      "count": 5
+    },
+    "crookston": {
+      "name": "Crookston",
+      "count": 5
+    },
+    "east-grand-forks": {
+      "name": "East Grand Forks",
+      "count": 6
+    },
+    "lake-bronson": {
+      "name": "Lake Bronson",
+      "count": 2
+    },
+    "bayport": {
+      "name": "Bayport",
+      "count": 3
+    },
+    "lake-st-croix-beach": {
+      "name": "Lake St. Croix Beach",
+      "count": 1
+    },
+    "lakeland": {
+      "name": "Lakeland",
+      "count": 1
+    },
+    "grant": {
+      "name": "Grant",
+      "count": 1
+    },
+    "oak-park-heights": {
+      "name": "Oak Park Heights",
+      "count": 6
+    },
+    "mahtomedi": {
+      "name": "Mahtomedi",
+      "count": 3
+    },
+    "marine-on-st-croix": {
+      "name": "Marine on St. Croix",
+      "count": 1
+    },
+    "willernie": {
+      "name": "Willernie",
+      "count": 1
+    },
+    "brainerd": {
+      "name": "Brainerd",
+      "count": 18
+    },
+    "madison": {
+      "name": "Madison",
+      "count": 3
+    },
+    "marietta": {
+      "name": "Marietta",
+      "count": 1
+    },
+    "st-clair": {
+      "name": "St. Clair",
+      "count": 2
+    },
+    "pemberton": {
+      "name": "Pemberton",
+      "count": 3
+    },
+    "pine-river": {
+      "name": "Pine River",
+      "count": 2
+    },
+    "baxter": {
+      "name": "Baxter",
+      "count": 7
+    },
+    "deer-river": {
+      "name": "Deer River",
+      "count": 3
+    },
+    "hilltop": {
+      "name": "Hilltop",
+      "count": 1
+    },
+    "oak-lawn-twp": {
+      "name": "Oak Lawn Twp",
+      "count": 3
+    },
+    "unorganized-twp": {
+      "name": "Unorganized Twp",
+      "count": 19
+    },
+    "pequot-lakes": {
+      "name": "Pequot Lakes",
+      "count": 7
+    },
+    "st-mathias-twp": {
+      "name": "St. Mathias Twp",
+      "count": 2
+    },
+    "milaca": {
+      "name": "Milaca",
+      "count": 7
+    },
+    "hermantown": {
+      "name": "Hermantown",
+      "count": 4
+    },
+    "new-brighton": {
+      "name": "New Brighton",
+      "count": 4
+    },
+    "arlington": {
+      "name": "Arlington",
+      "count": 4
+    },
+    "goodview": {
+      "name": "Goodview",
+      "count": 1
+    },
+    "keewatin": {
+      "name": "Keewatin",
+      "count": 3
+    },
+    "hibbing": {
+      "name": "Hibbing",
+      "count": 8
+    },
+    "winnebago": {
+      "name": "Winnebago",
+      "count": 2
+    },
+    "eyota": {
+      "name": "Eyota",
+      "count": 4
+    },
+    "kimball": {
+      "name": "Kimball",
+      "count": 5
+    },
+    "maine-prairie-twp": {
+      "name": "Maine Prairie Twp",
+      "count": 3
+    },
+    "bemidji": {
+      "name": "Bemidji",
+      "count": 14
+    },
+    "aitkin": {
+      "name": "Aitkin",
+      "count": 8
+    },
+    "spring-lake-park": {
+      "name": "Spring Lake Park",
+      "count": 3
+    },
+    "blaine": {
+      "name": "Blaine",
+      "count": 15
+    },
+    "arden-hills": {
+      "name": "Arden Hills",
+      "count": 2
+    },
+    "hanover": {
+      "name": "Hanover",
+      "count": 3
+    },
+    "lake-eunice-twp": {
+      "name": "Lake Eunice Twp",
+      "count": 3
+    },
+    "felton": {
+      "name": "Felton",
+      "count": 1
+    },
+    "georgetown": {
+      "name": "Georgetown",
+      "count": 1
+    },
+    "blooming-prairie": {
+      "name": "Blooming Prairie",
+      "count": 4
+    },
+    "maple-lake": {
+      "name": "Maple Lake",
+      "count": 5
+    },
+    "brooklyn-park": {
+      "name": "Brooklyn Park",
+      "count": 5
+    },
+    "brewster": {
+      "name": "Brewster",
+      "count": 2
+    },
+    "lamberton": {
+      "name": "Lamberton",
+      "count": 2
+    },
+    "morristown": {
+      "name": "Morristown",
+      "count": 4
+    },
+    "hardwick": {
+      "name": "Hardwick",
+      "count": 1
+    },
+    "magnolia-twp": {
+      "name": "Magnolia Twp",
+      "count": 1
+    },
+    "gnesen-twp": {
+      "name": "Gnesen Twp",
+      "count": 3
+    },
+    "elk-river": {
+      "name": "Elk River",
+      "count": 8
+    },
+    "gary": {
+      "name": "Gary",
+      "count": 1
+    },
+    "ortonville": {
+      "name": "Ortonville",
+      "count": 3
+    },
+    "lake-shore": {
+      "name": "Lake Shore",
+      "count": 3
+    },
+    "east-gull-lake": {
+      "name": "East Gull Lake",
+      "count": 4
+    },
+    "east-side-twp": {
+      "name": "East Side Twp",
+      "count": 5
+    },
+    "carlton": {
+      "name": "Carlton",
+      "count": 2
+    },
+    "bigfork": {
+      "name": "Bigfork",
+      "count": 1
+    },
+    "nimrod": {
+      "name": "Nimrod",
+      "count": 1
+    },
+    "staples": {
+      "name": "Staples",
+      "count": 6
+    },
+    "fairview-twp": {
+      "name": "Fairview Twp",
+      "count": 2
+    },
+    "farden-twp": {
+      "name": "Farden Twp",
+      "count": 1
+    },
+    "nisswa": {
+      "name": "Nisswa",
+      "count": 4
+    },
+    "scandia-valley-twp": {
+      "name": "Scandia Valley Twp",
+      "count": 5
+    },
+    "malmo-twp": {
+      "name": "Malmo Twp",
+      "count": 1
+    },
+    "manhattan-beach": {
+      "name": "Manhattan Beach",
+      "count": 2
+    },
+    "lakeshore": {
+      "name": "Lakeshore",
+      "count": 1
+    },
+    "apple-valley": {
+      "name": "Apple Valley",
+      "count": 5
+    },
+    "lake-park": {
+      "name": "Lake Park",
+      "count": 1
+    },
+    "cologne": {
+      "name": "Cologne",
+      "count": 3
+    },
+    "norwood-young-america": {
+      "name": "Norwood Young America",
+      "count": 4
+    },
+    "deerwood": {
+      "name": "Deerwood",
+      "count": 2
+    },
+    "lakeville": {
+      "name": "Lakeville",
+      "count": 8
+    },
+    "west-st-paul": {
+      "name": "West St. Paul",
+      "count": 11
+    },
+    "long-prairie": {
+      "name": "Long Prairie",
+      "count": 5
+    },
+    "welcome": {
+      "name": "Welcome",
+      "count": 2
+    },
+    "balaton": {
+      "name": "Balaton",
+      "count": 3
+    },
+    "foreston": {
+      "name": "Foreston",
+      "count": 2
+    },
+    "fulda": {
+      "name": "Fulda",
+      "count": 3
+    },
+    "chanhassen": {
+      "name": "Chanhassen",
+      "count": 4
+    },
+    "caledonia": {
+      "name": "Caledonia",
+      "count": 3
+    },
+    "clearbrook": {
+      "name": "Clearbrook",
+      "count": 1
+    },
+    "grygla": {
+      "name": "Grygla",
+      "count": 1
+    },
+    "spruce-grove-twp": {
+      "name": "Spruce Grove Twp",
+      "count": 1
+    },
+    "royalton": {
+      "name": "Royalton",
+      "count": 2
+    },
+    "kiester": {
+      "name": "Kiester",
+      "count": 2
+    },
+    "greenbush": {
+      "name": "Greenbush",
+      "count": 2
+    },
+    "wadena": {
+      "name": "Wadena",
+      "count": 8
+    },
+    "dover": {
+      "name": "Dover",
+      "count": 5
+    },
+    "darwin": {
+      "name": "Darwin",
+      "count": 2
+    },
+    "grove-city": {
+      "name": "Grove City",
+      "count": 3
+    },
+    "ogilvie": {
+      "name": "Ogilvie",
+      "count": 3
+    },
+    "kanabec-twp": {
+      "name": "Kanabec Twp",
+      "count": 1
+    },
+    "mora": {
+      "name": "Mora",
+      "count": 4
+    },
+    "new-london": {
+      "name": "New London",
+      "count": 2
+    },
+    "cosmos": {
+      "name": "Cosmos",
+      "count": 1
+    },
+    "little-canada": {
+      "name": "Little Canada",
+      "count": 5
+    },
+    "fisher": {
+      "name": "Fisher",
+      "count": 1
+    },
+    "wells-twp": {
+      "name": "Wells Twp",
+      "count": 3
+    },
+    "belgrade": {
+      "name": "Belgrade",
+      "count": 2
+    },
+    "greenwald": {
+      "name": "Greenwald",
+      "count": 2
+    },
+    "st-stephen": {
+      "name": "St. Stephen",
+      "count": 6
+    },
+    "holloway": {
+      "name": "Holloway",
+      "count": 1
+    },
+    "danvers": {
+      "name": "Danvers",
+      "count": 1
+    },
+    "wilson-twp": {
+      "name": "Wilson Twp",
+      "count": 1
+    },
+    "pleasant-hill-twp": {
+      "name": "Pleasant Hill Twp",
+      "count": 1
+    },
+    "minneiska": {
+      "name": "Minneiska",
+      "count": 2
+    },
+    "stockton": {
+      "name": "Stockton",
+      "count": 2
+    },
+    "lewisville": {
+      "name": "Lewisville",
+      "count": 2
+    },
+    "upsala": {
+      "name": "Upsala",
+      "count": 2
+    },
+    "elmdale": {
+      "name": "Elmdale",
+      "count": 2
+    },
+    "kerkhoven-twp": {
+      "name": "Kerkhoven Twp",
+      "count": 1
+    },
+    "benson-twp": {
+      "name": "Benson Twp",
+      "count": 1
+    },
+    "long-beach": {
+      "name": "Long Beach",
+      "count": 1
+    },
+    "jevne-twp": {
+      "name": "Jevne Twp",
+      "count": 1
+    },
+    "mcgregor": {
+      "name": "McGregor",
+      "count": 5
+    },
+    "shamrock-twp": {
+      "name": "Shamrock Twp",
+      "count": 12
+    },
+    "workman-twp": {
+      "name": "Workman Twp",
+      "count": 2
+    },
+    "spring-park": {
+      "name": "Spring Park",
+      "count": 2
+    },
+    "long-lake": {
+      "name": "Long Lake",
+      "count": 2
+    },
+    "independence": {
+      "name": "Independence",
+      "count": 1
+    },
+    "maple-plain": {
+      "name": "Maple Plain",
+      "count": 1
+    },
+    "st-anthony": {
+      "name": "St. Anthony",
+      "count": 1
+    },
+    "isle": {
+      "name": "Isle",
+      "count": 3
+    },
+    "wahkon": {
+      "name": "Wahkon",
+      "count": 4
+    },
+    "miltona": {
+      "name": "Miltona",
+      "count": 2
+    },
+    "sauk-centre": {
+      "name": "Sauk Centre",
+      "count": 7
+    },
+    "kandota-twp": {
+      "name": "Kandota Twp",
+      "count": 1
+    },
+    "duluth": {
+      "name": "Duluth",
+      "count": 33
+    },
+    "chokio": {
+      "name": "Chokio",
+      "count": 1
+    },
+    "hodges-twp": {
+      "name": "Hodges Twp",
+      "count": 1
+    },
+    "wakefield-twp": {
+      "name": "Wakefield Twp",
+      "count": 1
+    },
+    "fertile": {
+      "name": "Fertile",
+      "count": 3
+    },
+    "forada": {
+      "name": "Forada",
+      "count": 2
+    },
+    "rutledge": {
+      "name": "Rutledge",
+      "count": 1
+    },
+    "windemere-twp": {
+      "name": "Windemere Twp",
+      "count": 4
+    },
+    "ada": {
+      "name": "Ada",
+      "count": 2
+    },
+    "perley": {
+      "name": "Perley",
+      "count": 1
+    },
+    "mcdonaldsville-twp": {
+      "name": "McDonaldsville Twp",
+      "count": 1
+    },
+    "hendrum": {
+      "name": "Hendrum",
+      "count": 1
+    },
+    "lent-twp": {
+      "name": "Lent Twp",
+      "count": 1
+    },
+    "buffalo": {
+      "name": "Buffalo",
+      "count": 8
+    },
+    "may-twp": {
+      "name": "May Twp",
+      "count": 1
+    },
+    "kennedy": {
+      "name": "Kennedy",
+      "count": 1
+    },
+    "hackensack": {
+      "name": "Hackensack",
+      "count": 2
+    },
+    "st-rosa": {
+      "name": "St. Rosa",
+      "count": 2
+    },
+    "rail-prairie-twp": {
+      "name": "Rail Prairie Twp",
+      "count": 1
+    },
+    "ripley-twp": {
+      "name": "Ripley Twp",
+      "count": 1
+    },
+    "bagley": {
+      "name": "Bagley",
+      "count": 3
+    },
+    "leonard": {
+      "name": "Leonard",
+      "count": 1
+    },
+    "lengby": {
+      "name": "Lengby",
+      "count": 2
+    },
+    "pillager": {
+      "name": "Pillager",
+      "count": 2
+    },
+    "alden": {
+      "name": "Alden",
+      "count": 1
+    },
+    "golden-valley": {
+      "name": "Golden Valley",
+      "count": 3
+    },
+    "crosslake": {
+      "name": "Crosslake",
+      "count": 9
+    },
+    "preston": {
+      "name": "Preston",
+      "count": 3
+    },
+    "wayzata": {
+      "name": "Wayzata",
+      "count": 2
+    },
+    "erhard": {
+      "name": "Erhard",
+      "count": 1
+    },
+    "hillman": {
+      "name": "Hillman",
+      "count": 3
+    },
+    "morrill-twp": {
+      "name": "Morrill Twp",
+      "count": 2
+    },
+    "elysian": {
+      "name": "Elysian",
+      "count": 4
+    },
+    "janesville": {
+      "name": "Janesville",
+      "count": 4
+    },
+    "sleepy-eye": {
+      "name": "Sleepy Eye",
+      "count": 3
+    },
+    "melrose": {
+      "name": "Melrose",
+      "count": 6
+    },
+    "west-union": {
+      "name": "West Union",
+      "count": 1
+    },
+    "lancaster": {
+      "name": "Lancaster",
+      "count": 1
+    },
+    "st-hilaire": {
+      "name": "St. Hilaire",
+      "count": 1
+    },
+    "st-george-twp": {
+      "name": "St. George Twp",
+      "count": 1
+    },
+    "stewartville": {
+      "name": "Stewartville",
+      "count": 4
+    },
+    "garfield": {
+      "name": "Garfield",
+      "count": 2
+    },
+    "campbell": {
+      "name": "Campbell",
+      "count": 1
+    },
+    "breckenridge": {
+      "name": "Breckenridge",
+      "count": 2
+    },
+    "arthur-twp": {
+      "name": "Arthur Twp",
+      "count": 2
+    },
+    "peace-twp": {
+      "name": "Peace Twp",
+      "count": 2
+    },
+    "ideal-twp": {
+      "name": "Ideal Twp",
+      "count": 2
+    },
+    "rice": {
+      "name": "Rice",
+      "count": 6
+    },
+    "byron": {
+      "name": "Byron",
+      "count": 5
+    },
+    "hill-city": {
+      "name": "Hill City",
+      "count": 2
+    },
+    "harris-twp": {
+      "name": "Harris Twp",
+      "count": 2
+    },
+    "spalding-twp": {
+      "name": "Spalding Twp",
+      "count": 1
+    },
+    "salo-twp": {
+      "name": "Salo Twp",
+      "count": 1
+    },
+    "albany": {
+      "name": "Albany",
+      "count": 9
+    },
+    "underwood": {
+      "name": "Underwood",
+      "count": 2
+    },
+    "bricelyn": {
+      "name": "Bricelyn",
+      "count": 1
+    },
+    "longville": {
+      "name": "Longville",
+      "count": 2
+    },
+    "inguadona-twp": {
+      "name": "Inguadona Twp",
+      "count": 1
+    },
+    "new-prague": {
+      "name": "New Prague",
+      "count": 11
+    },
+    "zimmerman": {
+      "name": "Zimmerman",
+      "count": 4
+    },
+    "virginia": {
+      "name": "Virginia",
+      "count": 7
+    },
+    "gilbert": {
+      "name": "Gilbert",
+      "count": 6
+    },
+    "mountain-iron": {
+      "name": "Mountain Iron",
+      "count": 3
+    },
+    "tower": {
+      "name": "Tower",
+      "count": 4
+    },
+    "biwabik": {
+      "name": "Biwabik",
+      "count": 4
+    },
+    "big-lake": {
+      "name": "Big Lake",
+      "count": 11
+    },
+    "ramsey": {
+      "name": "Ramsey",
+      "count": 2
+    },
+    "sherburn": {
+      "name": "Sherburn",
+      "count": 2
+    },
+    "hallock": {
+      "name": "Hallock",
+      "count": 1
+    },
+    "henrietta-twp": {
+      "name": "Henrietta Twp",
+      "count": 3
+    },
+    "cleveland": {
+      "name": "Cleveland",
+      "count": 3
+    },
+    "gaylord": {
+      "name": "Gaylord",
+      "count": 3
+    },
+    "climax": {
+      "name": "Climax",
+      "count": 1
+    },
+    "madison-lake": {
+      "name": "Madison Lake",
+      "count": 3
+    },
+    "conger": {
+      "name": "Conger",
+      "count": 1
+    },
+    "walters": {
+      "name": "Walters",
+      "count": 1
+    },
+    "belview": {
+      "name": "Belview",
+      "count": 2
+    },
+    "winsted": {
+      "name": "Winsted",
+      "count": 4
+    },
+    "grey-eagle": {
+      "name": "Grey Eagle",
+      "count": 3
+    },
+    "grey-eagle-twp": {
+      "name": "Grey Eagle Twp",
+      "count": 2
+    },
+    "gonvick": {
+      "name": "Gonvick",
+      "count": 1
+    },
+    "glenville": {
+      "name": "Glenville",
+      "count": 1
+    },
+    "boy-river-twp": {
+      "name": "Boy River Twp",
+      "count": 1
+    },
+    "remer": {
+      "name": "Remer",
+      "count": 4
+    },
+    "howard-lake": {
+      "name": "Howard Lake",
+      "count": 2
+    },
+    "dalton": {
+      "name": "Dalton",
+      "count": 1
+    },
+    "st-joseph": {
+      "name": "St. Joseph",
+      "count": 4
+    },
+    "hayfield": {
+      "name": "Hayfield",
+      "count": 4
+    },
+    "rock-creek": {
+      "name": "Rock Creek",
+      "count": 2
+    },
+    "bock": {
+      "name": "Bock",
+      "count": 3
+    },
+    "holdingford": {
+      "name": "Holdingford",
+      "count": 4
+    },
+    "ranier": {
+      "name": "Ranier",
+      "count": 2
+    },
+    "onamia": {
+      "name": "Onamia",
+      "count": 2
+    },
+    "spring-grove": {
+      "name": "Spring Grove",
+      "count": 2
+    },
+    "freeport": {
+      "name": "Freeport",
+      "count": 2
+    },
+    "hollywood-twp": {
+      "name": "Hollywood Twp",
+      "count": 1
+    },
+    "watertown": {
+      "name": "Watertown",
+      "count": 2
+    },
+    "glenwood": {
+      "name": "Glenwood",
+      "count": 2
+    },
+    "mission-twp": {
+      "name": "Mission Twp",
+      "count": 1
+    },
+    "bovey": {
+      "name": "Bovey",
+      "count": 1
+    },
+    "lone-pine-twp": {
+      "name": "Lone Pine Twp",
+      "count": 1
+    },
+    "floodwood": {
+      "name": "Floodwood",
+      "count": 1
+    },
+    "greenway-twp": {
+      "name": "Greenway Twp",
+      "count": 4
+    },
+    "coleraine": {
+      "name": "Coleraine",
+      "count": 2
+    },
+    "st-francis": {
+      "name": "St. Francis",
+      "count": 4
+    },
+    "courtland": {
+      "name": "Courtland",
+      "count": 2
+    },
+    "nowthen": {
+      "name": "Nowthen",
+      "count": 2
+    },
+    "richmond": {
+      "name": "Richmond",
+      "count": 4
+    },
+    "spring-lake-twp": {
+      "name": "Spring Lake Twp",
+      "count": 2
+    },
+    "middle-river": {
+      "name": "Middle River",
+      "count": 2
+    },
+    "cold-spring": {
+      "name": "Cold Spring",
+      "count": 6
+    },
+    "roscoe": {
+      "name": "Roscoe",
+      "count": 3
+    },
+    "karlstad": {
+      "name": "Karlstad",
+      "count": 2
+    },
+    "warroad": {
+      "name": "Warroad",
+      "count": 8
+    },
+    "lake-twp": {
+      "name": "Lake Twp",
+      "count": 3
+    },
+    "rogers": {
+      "name": "Rogers",
+      "count": 9
+    },
+    "watkins": {
+      "name": "Watkins",
+      "count": 4
+    },
+    "rockville": {
+      "name": "Rockville",
+      "count": 2
+    },
+    "st-joseph-twp": {
+      "name": "St. Joseph Twp",
+      "count": 1
+    },
+    "newport": {
+      "name": "Newport",
+      "count": 2
+    },
+    "palisade": {
+      "name": "Palisade",
+      "count": 3
+    },
+    "hoffman": {
+      "name": "Hoffman",
+      "count": 2
+    },
+    "eveleth": {
+      "name": "Eveleth",
+      "count": 8
+    },
+    "chisholm": {
+      "name": "Chisholm",
+      "count": 6
+    },
+    "waconia": {
+      "name": "Waconia",
+      "count": 6
+    },
+    "medford": {
+      "name": "Medford",
+      "count": 1
+    },
+    "verndale": {
+      "name": "Verndale",
+      "count": 2
+    },
+    "elizabeth": {
+      "name": "Elizabeth",
+      "count": 2
+    },
+    "elmore-twp": {
+      "name": "Elmore Twp",
+      "count": 1
+    },
+    "jasper": {
+      "name": "Jasper",
+      "count": 1
+    },
+    "fifty-lakes": {
+      "name": "Fifty Lakes",
+      "count": 1
+    },
+    "carver": {
+      "name": "Carver",
+      "count": 4
+    },
+    "grass-lake-twp": {
+      "name": "Grass Lake Twp",
+      "count": 1
+    },
+    "new-trier": {
+      "name": "New Trier",
+      "count": 2
+    },
+    "mayer": {
+      "name": "Mayer",
+      "count": 2
+    },
+    "bowlus": {
+      "name": "Bowlus",
+      "count": 4
+    },
+    "clear-lake": {
+      "name": "Clear Lake",
+      "count": 1
+    },
+    "palmer-twp": {
+      "name": "Palmer Twp",
+      "count": 1
+    },
+    "becker": {
+      "name": "Becker",
+      "count": 3
+    },
+    "webster-twp": {
+      "name": "Webster Twp",
+      "count": 2
+    },
+    "hinckley": {
+      "name": "Hinckley",
+      "count": 3
+    },
+    "south-haven": {
+      "name": "South Haven",
+      "count": 2
+    },
+    "mazeppa": {
+      "name": "Mazeppa",
+      "count": 3
+    },
+    "zumbro-falls": {
+      "name": "Zumbro Falls",
+      "count": 4
+    },
+    "mantorville": {
+      "name": "Mantorville",
+      "count": 4
+    },
+    "dodge-center": {
+      "name": "Dodge Center",
+      "count": 3
+    },
+    "vernon-center": {
+      "name": "Vernon Center",
+      "count": 1
+    },
+    "wabasso": {
+      "name": "Wabasso",
+      "count": 2
+    },
+    "wanda": {
+      "name": "Wanda",
+      "count": 1
+    },
+    "amboy": {
+      "name": "Amboy",
+      "count": 1
+    },
+    "loretto": {
+      "name": "Loretto",
+      "count": 5
+    },
+    "fairfield-twp": {
+      "name": "Fairfield Twp",
+      "count": 1
+    },
+    "stacy": {
+      "name": "Stacy",
+      "count": 4
+    },
+    "erskine": {
+      "name": "Erskine",
+      "count": 1
+    },
+    "rush-city": {
+      "name": "Rush City",
+      "count": 4
+    },
+    "pine-city-twp": {
+      "name": "Pine City Twp",
+      "count": 1
+    },
+    "blackduck": {
+      "name": "Blackduck",
+      "count": 2
+    },
+    "shotley-twp": {
+      "name": "Shotley Twp",
+      "count": 3
+    },
+    "tenstrike": {
+      "name": "Tenstrike",
+      "count": 1
+    },
+    "shieldsville-twp": {
+      "name": "Shieldsville Twp",
+      "count": 2
+    },
+    "walcott-twp": {
+      "name": "Walcott Twp",
+      "count": 1
+    },
+    "lindstrom": {
+      "name": "Lindstrom",
+      "count": 2
+    },
+    "elrosa": {
+      "name": "Elrosa",
+      "count": 1
+    },
+    "raymond-twp": {
+      "name": "Raymond Twp",
+      "count": 1
+    },
+    "sedan": {
+      "name": "Sedan",
+      "count": 1
+    },
+    "nashwauk": {
+      "name": "Nashwauk",
+      "count": 2
+    },
+    "bay-lake-twp": {
+      "name": "Bay Lake Twp",
+      "count": 2
+    },
+    "maple-grove-twp": {
+      "name": "Maple Grove Twp",
+      "count": 2
+    },
+    "elbow-lake": {
+      "name": "Elbow Lake",
+      "count": 1
+    },
+    "parkers-prairie": {
+      "name": "Parkers Prairie",
+      "count": 3
+    },
+    "vining": {
+      "name": "Vining",
+      "count": 1
+    },
+    "fair-haven-twp": {
+      "name": "Fair Haven Twp",
+      "count": 2
+    },
+    "new-germany": {
+      "name": "New Germany",
+      "count": 3
+    },
+    "fairfax": {
+      "name": "Fairfax",
+      "count": 2
+    },
+    "warsaw-twp": {
+      "name": "Warsaw Twp",
+      "count": 1
+    },
+    "lexington-twp": {
+      "name": "Lexington Twp",
+      "count": 2
+    },
+    "jenkins": {
+      "name": "Jenkins",
+      "count": 2
+    },
+    "harding": {
+      "name": "Harding",
+      "count": 4
+    },
+    "lake-elmo": {
+      "name": "Lake Elmo",
+      "count": 3
+    },
+    "denham": {
+      "name": "Denham",
+      "count": 1
+    },
+    "willow-river": {
+      "name": "Willow River",
+      "count": 2
+    },
+    "brandon": {
+      "name": "Brandon",
+      "count": 1
+    },
+    "st-louis-park": {
+      "name": "St. Louis Park",
+      "count": 5
+    },
+    "midway-twp": {
+      "name": "Midway Twp",
+      "count": 2
+    },
+    "proctor": {
+      "name": "Proctor",
+      "count": 5
+    },
+    "wright": {
+      "name": "Wright",
+      "count": 1
+    },
+    "solway-twp": {
+      "name": "Solway Twp",
+      "count": 2
+    },
+    "waltham": {
+      "name": "Waltham",
+      "count": 1
+    },
+    "badger": {
+      "name": "Badger",
+      "count": 1
+    },
+    "lowry": {
+      "name": "Lowry",
+      "count": 2
+    },
+    "waldorf": {
+      "name": "Waldorf",
+      "count": 1
+    },
+    "elko-new-market": {
+      "name": "Elko New Market",
+      "count": 8
+    },
+    "sturgeon-lake": {
+      "name": "Sturgeon Lake",
+      "count": 1
+    },
+    "culdrum-twp": {
+      "name": "Culdrum Twp",
+      "count": 1
+    },
+    "homer-twp": {
+      "name": "Homer Twp",
+      "count": 1
+    },
+    "madelia": {
+      "name": "Madelia",
+      "count": 1
+    },
+    "waterville": {
+      "name": "Waterville",
+      "count": 4
+    },
+    "dundas": {
+      "name": "Dundas",
+      "count": 2
+    },
+    "lastrup": {
+      "name": "Lastrup",
+      "count": 1
+    },
+    "atwater": {
+      "name": "Atwater",
+      "count": 1
+    },
+    "swanville": {
+      "name": "Swanville",
+      "count": 4
+    },
+    "pelican-rapids": {
+      "name": "Pelican Rapids",
+      "count": 1
+    },
+    "lonsdale": {
+      "name": "Lonsdale",
+      "count": 5
+    },
+    "good-thunder": {
+      "name": "Good Thunder",
+      "count": 1
+    },
+    "finlayson": {
+      "name": "Finlayson",
+      "count": 1
+    },
+    "cuyuna": {
+      "name": "Cuyuna",
+      "count": 1
+    },
+    "canosia-twp": {
+      "name": "Canosia Twp",
+      "count": 1
+    },
+    "cyrus": {
+      "name": "Cyrus",
+      "count": 1
+    },
+    "nevis": {
+      "name": "Nevis",
+      "count": 1
+    },
+    "minnesota-lake": {
+      "name": "Minnesota Lake",
+      "count": 2
+    },
+    "houston": {
+      "name": "Houston",
+      "count": 2
+    },
+    "adrian": {
+      "name": "Adrian",
+      "count": 3
+    },
+    "rushmore": {
+      "name": "Rushmore",
+      "count": 1
+    },
+    "ellsworth": {
+      "name": "Ellsworth",
+      "count": 1
+    },
+    "crooked-lake-twp": {
+      "name": "Crooked Lake Twp",
+      "count": 3
+    },
+    "emily": {
+      "name": "Emily",
+      "count": 4
+    },
+    "center-city": {
+      "name": "Center City",
+      "count": 3
+    },
+    "shafer": {
+      "name": "Shafer",
+      "count": 2
+    },
+    "taylors-falls": {
+      "name": "Taylors Falls",
+      "count": 2
+    },
+    "amador-twp": {
+      "name": "Amador Twp",
+      "count": 1
+    },
+    "barnum": {
+      "name": "Barnum",
+      "count": 1
+    },
+    "cromwell": {
+      "name": "Cromwell",
+      "count": 1
+    },
+    "askov": {
+      "name": "Askov",
+      "count": 1
+    },
+    "sandstone": {
+      "name": "Sandstone",
+      "count": 1
+    },
+    "hamburg": {
+      "name": "Hamburg",
+      "count": 1
+    },
+    "avon-twp": {
+      "name": "Avon Twp",
+      "count": 3
+    },
+    "watab-twp": {
+      "name": "Watab Twp",
+      "count": 3
+    },
+    "minden-twp": {
+      "name": "Minden Twp",
+      "count": 3
+    },
+    "gilman": {
+      "name": "Gilman",
+      "count": 1
+    },
+    "green-prairie-twp": {
+      "name": "Green Prairie Twp",
+      "count": 2
+    },
+    "leaf-valley-twp": {
+      "name": "Leaf Valley Twp",
+      "count": 1
+    },
+    "eagle-bend": {
+      "name": "Eagle Bend",
+      "count": 2
+    },
+    "maple-grove": {
+      "name": "Maple Grove",
+      "count": 12
+    },
+    "canton": {
+      "name": "Canton",
+      "count": 1
+    },
+    "millerville": {
+      "name": "Millerville",
+      "count": 1
+    },
+    "nicollet-twp": {
+      "name": "Nicollet Twp",
+      "count": 1
+    },
+    "nicollet": {
+      "name": "Nicollet",
+      "count": 3
+    },
+    "stewart": {
+      "name": "Stewart",
+      "count": 1
+    },
+    "chisago-city": {
+      "name": "Chisago City",
+      "count": 5
+    },
+    "roosevelt-twp": {
+      "name": "Roosevelt Twp",
+      "count": 2
+    },
+    "ghent": {
+      "name": "Ghent",
+      "count": 1
+    },
+    "evansville": {
+      "name": "Evansville",
+      "count": 1
+    },
+    "hills": {
+      "name": "Hills",
+      "count": 1
+    },
+    "oklee": {
+      "name": "Oklee",
+      "count": 1
+    },
+    "henderson": {
+      "name": "Henderson",
+      "count": 4
+    },
+    "dayton": {
+      "name": "Dayton",
+      "count": 2
+    },
+    "page-twp": {
+      "name": "Page Twp",
+      "count": 2
+    },
+    "montrose": {
+      "name": "Montrose",
+      "count": 1
+    },
+    "rockford": {
+      "name": "Rockford",
+      "count": 2
+    },
+    "cedar-lake-twp": {
+      "name": "Cedar Lake Twp",
+      "count": 1
+    },
+    "brownton": {
+      "name": "Brownton",
+      "count": 1
+    },
+    "pierz": {
+      "name": "Pierz",
+      "count": 6
+    },
+    "buckman": {
+      "name": "Buckman",
+      "count": 3
+    },
+    "falcon-heights": {
+      "name": "Falcon Heights",
+      "count": 1
+    },
+    "browerville": {
+      "name": "Browerville",
+      "count": 2
+    },
+    "highland-twp": {
+      "name": "Highland Twp",
+      "count": 2
+    },
+    "sacred-heart": {
+      "name": "Sacred Heart",
+      "count": 1
+    },
+    "corcoran": {
+      "name": "Corcoran",
+      "count": 1
+    },
+    "robbinsdale": {
+      "name": "Robbinsdale",
+      "count": 2
+    },
+    "medina": {
+      "name": "Medina",
+      "count": 2
+    },
+    "crosby": {
+      "name": "Crosby",
+      "count": 5
+    },
+    "alborn-twp": {
+      "name": "Alborn Twp",
+      "count": 2
+    },
+    "meadowlands": {
+      "name": "Meadowlands",
+      "count": 1
+    },
+    "hadley": {
+      "name": "Hadley",
+      "count": 1
+    },
+    "woodstock": {
+      "name": "Woodstock",
+      "count": 1
+    },
+    "holland": {
+      "name": "Holland",
+      "count": 1
+    },
+    "rice-lake": {
+      "name": "Rice Lake",
+      "count": 4
+    },
+    "porter": {
+      "name": "Porter",
+      "count": 1
+    },
+    "waverly": {
+      "name": "Waverly",
+      "count": 3
+    },
+    "clarkfield": {
+      "name": "Clarkfield",
+      "count": 1
+    },
+    "sartell": {
+      "name": "Sartell",
+      "count": 8
+    },
+    "mcgrath": {
+      "name": "McGrath",
+      "count": 2
+    },
+    "rice-river-twp": {
+      "name": "Rice River Twp",
+      "count": 2
+    },
+    "lafayette": {
+      "name": "Lafayette",
+      "count": 1
+    },
+    "windom": {
+      "name": "Windom",
+      "count": 1
+    },
+    "heron-lake": {
+      "name": "Heron Lake",
+      "count": 1
+    },
+    "morton": {
+      "name": "Morton",
+      "count": 1
+    },
+    "slayton": {
+      "name": "Slayton",
+      "count": 2
+    },
+    "currie": {
+      "name": "Currie",
+      "count": 1
+    },
+    "lake-wilson": {
+      "name": "Lake Wilson",
+      "count": 1
+    },
+    "wilmont": {
+      "name": "Wilmont",
+      "count": 1
+    },
+    "dovray": {
+      "name": "Dovray",
+      "count": 1
+    },
+    "scandia": {
+      "name": "Scandia",
+      "count": 3
+    },
+    "springvale-twp": {
+      "name": "Springvale Twp",
+      "count": 2
+    },
+    "dalbo-twp": {
+      "name": "Dalbo Twp",
+      "count": 1
+    },
+    "cambridge": {
+      "name": "Cambridge",
+      "count": 4
+    },
+    "bradford-twp": {
+      "name": "Bradford Twp",
+      "count": 1
+    },
+    "cambridge-twp": {
+      "name": "Cambridge twp",
+      "count": 1
+    },
+    "green-isle": {
+      "name": "Green Isle",
+      "count": 2
+    },
+    "canby": {
+      "name": "Canby",
+      "count": 2
+    },
+    "brockway-twp": {
+      "name": "Brockway Twp",
+      "count": 1
+    },
+    "stony-river-twp": {
+      "name": "Stony River Twp",
+      "count": 3
+    },
+    "crystal-bay-twp": {
+      "name": "Crystal Bay Twp",
+      "count": 1
+    },
+    "silver-bay": {
+      "name": "Silver Bay",
+      "count": 1
+    },
+    "east-bethel": {
+      "name": "East Bethel",
+      "count": 4
+    },
+    "otsego": {
+      "name": "Otsego",
+      "count": 3
+    },
+    "spring-hill": {
+      "name": "Spring Hill",
+      "count": 2
+    },
+    "le-sueur": {
+      "name": "Le Sueur",
+      "count": 3
+    },
+    "calumet": {
+      "name": "Calumet",
+      "count": 1
+    },
+    "austin-twp": {
+      "name": "Austin Twp",
+      "count": 1
+    },
+    "sharon-twp": {
+      "name": "Sharon Twp",
+      "count": 1
+    },
+    "bigfork-twp": {
+      "name": "Bigfork Twp",
+      "count": 1
+    },
+    "effie": {
+      "name": "Effie",
+      "count": 1
+    },
+    "carpenter-twp": {
+      "name": "Carpenter Twp",
+      "count": 1
+    },
+    "marcell-twp": {
+      "name": "Marcell Twp",
+      "count": 1
+    },
+    "morcom-twp": {
+      "name": "Morcom Twp",
+      "count": 1
+    },
+    "barnesville": {
+      "name": "Barnesville",
+      "count": 1
+    },
+    "jordan": {
+      "name": "Jordan",
+      "count": 9
+    },
+    "garrison-twp": {
+      "name": "Garrison Twp",
+      "count": 2
+    },
+    "avon": {
+      "name": "Avon",
+      "count": 4
+    },
+    "cohasset": {
+      "name": "Cohasset",
+      "count": 1
+    },
+    "sanborn": {
+      "name": "Sanborn",
+      "count": 1
+    },
+    "genola": {
+      "name": "Genola",
+      "count": 2
+    },
+    "kelliher": {
+      "name": "Kelliher",
+      "count": 2
+    },
+    "breezy-point": {
+      "name": "Breezy Point",
+      "count": 2
+    },
+    "munson-twp": {
+      "name": "Munson Twp",
+      "count": 1
+    },
+    "boyd": {
+      "name": "Boyd",
+      "count": 1
+    },
+    "dennison": {
+      "name": "Dennison",
+      "count": 3
+    },
+    "stephen": {
+      "name": "Stephen",
+      "count": 2
+    },
+    "greenwood-twp": {
+      "name": "Greenwood Twp",
+      "count": 2
+    },
+    "hanley-falls": {
+      "name": "Hanley Falls",
+      "count": 1
+    },
+    "buffalo-lake": {
+      "name": "Buffalo Lake",
+      "count": 1
+    },
+    "hayfield-twp": {
+      "name": "Hayfield Twp",
+      "count": 1
+    },
+    "brownsdale": {
+      "name": "Brownsdale",
+      "count": 1
+    },
+    "stanchfield-twp": {
+      "name": "Stanchfield Twp",
+      "count": 1
+    },
+    "hawley": {
+      "name": "Hawley",
+      "count": 3
+    },
+    "backus": {
+      "name": "Backus",
+      "count": 1
+    },
+    "hayward": {
+      "name": "Hayward",
+      "count": 1
+    },
+    "myrtle": {
+      "name": "Myrtle",
+      "count": 2
+    },
+    "cottonwood-twp": {
+      "name": "Cottonwood Twp",
+      "count": 1
+    },
+    "lakewood-twp": {
+      "name": "Lakewood Twp",
+      "count": 1
+    },
+    "st-bonifacius": {
+      "name": "St. Bonifacius",
+      "count": 2
+    },
+    "kilkenny": {
+      "name": "Kilkenny",
+      "count": 2
+    },
+    "dent": {
+      "name": "Dent",
+      "count": 1
+    },
+    "richville": {
+      "name": "Richville",
+      "count": 1
+    },
+    "annandale": {
+      "name": "Annandale",
+      "count": 7
+    },
+    "twin-lakes": {
+      "name": "Twin Lakes",
+      "count": 1
+    },
+    "beardsley": {
+      "name": "Beardsley",
+      "count": 1
+    },
+    "graceville": {
+      "name": "Graceville",
+      "count": 3
+    },
+    "dumont": {
+      "name": "Dumont",
+      "count": 1
+    },
+    "clinton": {
+      "name": "Clinton",
+      "count": 1
+    },
+    "ham-lake": {
+      "name": "Ham Lake",
+      "count": 3
+    },
+    "elysian-twp": {
+      "name": "Elysian Twp",
+      "count": 1
+    },
+    "fort-ripley": {
+      "name": "Fort Ripley",
+      "count": 1
+    },
+    "lester-prairie": {
+      "name": "Lester Prairie",
+      "count": 3
+    },
+    "big-falls": {
+      "name": "Big Falls",
+      "count": 1
+    },
+    "brook-park": {
+      "name": "Brook Park",
+      "count": 1
+    },
+    "arlone-twp": {
+      "name": "Arlone Twp",
+      "count": 1
+    },
+    "braham": {
+      "name": "Braham",
+      "count": 1
+    },
+    "pokegama-twp": {
+      "name": "Pokegama twp",
+      "count": 1
+    },
+    "chengwatana-twp": {
+      "name": "Chengwatana Twp",
+      "count": 1
+    },
+    "florence-twp": {
+      "name": "Florence Twp",
+      "count": 1
+    },
+    "renville": {
+      "name": "Renville",
+      "count": 1
+    },
+    "hazelton-twp": {
+      "name": "Hazelton Twp",
+      "count": 1
+    },
+    "pleasant-prairie-twp": {
+      "name": "Pleasant Prairie Twp",
+      "count": 1
+    },
+    "lanesboro": {
+      "name": "Lanesboro",
+      "count": 4
+    },
+    "de-graff": {
+      "name": "De Graff",
+      "count": 1
+    },
+    "browns-valley": {
+      "name": "Browns Valley",
+      "count": 1
+    },
+    "clara-city": {
+      "name": "Clara City",
+      "count": 1
+    },
+    "bellechester": {
+      "name": "Bellechester",
+      "count": 1
+    },
+    "chatfield": {
+      "name": "Chatfield",
+      "count": 4
+    },
+    "buhl": {
+      "name": "Buhl",
+      "count": 1
+    },
+    "fountain": {
+      "name": "Fountain",
+      "count": 1
+    },
+    "wykoff": {
+      "name": "Wykoff",
+      "count": 1
+    },
+    "kathio-twp": {
+      "name": "Kathio Twp",
+      "count": 1
+    },
+    "nessel-twp": {
+      "name": "Nessel Twp",
+      "count": 1
+    },
+    "sobieski": {
+      "name": "Sobieski",
+      "count": 2
+    },
+    "dexter": {
+      "name": "Dexter",
+      "count": 1
+    },
+    "belle-plaine": {
+      "name": "Belle Plaine",
+      "count": 13
+    },
+    "blakeley-twp": {
+      "name": "Blakeley Twp",
+      "count": 1
+    },
+    "alvarado": {
+      "name": "Alvarado",
+      "count": 1
+    },
+    "st-martin": {
+      "name": "St. Martin",
+      "count": 1
+    },
+    "hector": {
+      "name": "Hector",
+      "count": 1
+    },
+    "new-hope": {
+      "name": "New Hope",
+      "count": 3
+    },
+    "randolph": {
+      "name": "Randolph",
+      "count": 2
+    },
+    "hampton": {
+      "name": "Hampton",
+      "count": 1
+    },
+    "oronoco": {
+      "name": "Oronoco",
+      "count": 1
+    },
+    "morgan": {
+      "name": "Morgan",
+      "count": 2
+    },
+    "sauk-rapids-twp": {
+      "name": "Sauk Rapids Twp",
+      "count": 1
+    },
+    "westbrook": {
+      "name": "Westbrook",
+      "count": 2
+    },
+    "litchfield-twp": {
+      "name": "Litchfield Twp",
+      "count": 1
+    },
+    "barrett": {
+      "name": "Barrett",
+      "count": 2
+    },
+    "mcintosh": {
+      "name": "McIntosh",
+      "count": 1
+    },
+    "eden-prairie": {
+      "name": "Eden Prairie",
+      "count": 2
+    },
+    "miltona-twp": {
+      "name": "Miltona Twp",
+      "count": 3
+    },
+    "lewiston": {
+      "name": "Lewiston",
+      "count": 2
+    },
+    "angora-twp": {
+      "name": "Angora Twp",
+      "count": 2
+    },
+    "la-salle": {
+      "name": "La Salle",
+      "count": 1
+    },
+    "ellendale": {
+      "name": "Ellendale",
+      "count": 1
+    },
+    "castle-rock-twp": {
+      "name": "Castle Rock Twp",
+      "count": 2
+    },
+    "oslo": {
+      "name": "Oslo",
+      "count": 1
+    },
+    "rollingstone": {
+      "name": "Rollingstone",
+      "count": 1
+    },
+    "minnesota-city": {
+      "name": "Minnesota City",
+      "count": 1
+    },
+    "utica": {
+      "name": "Utica",
+      "count": 2
+    },
+    "dresbach-twp": {
+      "name": "Dresbach Twp",
+      "count": 1
+    },
+    "rollingstone-twp": {
+      "name": "Rollingstone Twp",
+      "count": 2
+    },
+    "perry-lake-twp": {
+      "name": "Perry Lake Twp",
+      "count": 1
+    },
+    "spencer-brook-twp": {
+      "name": "Spencer Brook Twp",
+      "count": 1
+    },
+    "fredenberg-twp": {
+      "name": "Fredenberg Twp",
+      "count": 2
+    },
+    "rose-creek": {
+      "name": "Rose Creek",
+      "count": 2
+    },
+    "atkinson-twp": {
+      "name": "Atkinson Twp",
+      "count": 1
+    },
+    "audubon": {
+      "name": "Audubon",
+      "count": 1
+    },
+    "lake-henry": {
+      "name": "Lake Henry",
+      "count": 1
+    },
+    "danube": {
+      "name": "Danube",
+      "count": 1
+    },
+    "geneva": {
+      "name": "Geneva",
+      "count": 2
+    },
+    "hollandale": {
+      "name": "Hollandale",
+      "count": 1
+    },
+    "ceylon": {
+      "name": "Ceylon",
+      "count": 1
+    },
+    "granada": {
+      "name": "Granada",
+      "count": 1
+    },
+    "northrop": {
+      "name": "Northrop",
+      "count": 1
+    },
+    "dunnell": {
+      "name": "Dunnell",
+      "count": 1
+    },
+    "manyaska-twp": {
+      "name": "Manyaska Twp",
+      "count": 1
+    },
+    "perch-lake-twp": {
+      "name": "Perch Lake Twp",
+      "count": 2
+    },
+    "wrenshall": {
+      "name": "Wrenshall",
+      "count": 2
+    },
+    "bethel": {
+      "name": "Bethel",
+      "count": 1
+    },
+    "oak-grove": {
+      "name": "Oak Grove",
+      "count": 2
+    },
+    "winthrop": {
+      "name": "Winthrop",
+      "count": 1
+    },
+    "victoria": {
+      "name": "Victoria",
+      "count": 3
+    },
+    "maywood-twp": {
+      "name": "Maywood Twp",
+      "count": 1
+    },
+    "cherry-twp": {
+      "name": "Cherry Twp",
+      "count": 1
+    },
+    "french-twp": {
+      "name": "French Twp",
+      "count": 1
+    },
+    "eitzen": {
+      "name": "Eitzen",
+      "count": 1
+    },
+    "lakefield": {
+      "name": "Lakefield",
+      "count": 3
+    },
+    "freeborn": {
+      "name": "Freeborn",
+      "count": 1
+    },
+    "trail": {
+      "name": "Trail",
+      "count": 1
+    },
+    "dawson": {
+      "name": "Dawson",
+      "count": 2
+    },
+    "kenyon": {
+      "name": "Kenyon",
+      "count": 3
+    },
+    "cokato": {
+      "name": "Cokato",
+      "count": 1
+    },
+    "burnsville": {
+      "name": "Burnsville",
+      "count": 3
+    },
+    "maynard": {
+      "name": "Maynard",
+      "count": 1
+    },
+    "mountain-lake": {
+      "name": "Mountain Lake",
+      "count": 3
+    },
+    "olivia": {
+      "name": "Olivia",
+      "count": 2
+    },
+    "caledonia-twp": {
+      "name": "Caledonia Twp",
+      "count": 1
+    },
+    "clarks-grove": {
+      "name": "Clarks Grove",
+      "count": 1
+    },
+    "ostrander": {
+      "name": "Ostrander",
+      "count": 2
+    },
+    "dahlgren-twp": {
+      "name": "Dahlgren Twp",
+      "count": 1
+    },
+    "avoca": {
+      "name": "Avoca",
+      "count": 1
+    },
+    "lanesburgh-twp": {
+      "name": "Lanesburgh Twp",
+      "count": 1
+    },
+    "decoria-twp": {
+      "name": "Decoria Twp",
+      "count": 1
+    },
+    "south-bend-twp": {
+      "name": "South Bend Twp",
+      "count": 1
+    },
+    "wheatland-twp": {
+      "name": "Wheatland Twp",
+      "count": 1
+    },
+    "farming-twp": {
+      "name": "Farming Twp",
+      "count": 1
+    },
+    "elgin": {
+      "name": "Elgin",
+      "count": 4
+    },
+    "elba": {
+      "name": "Elba",
+      "count": 5
+    },
+    "fish-lake-twp": {
+      "name": "Fish Lake Twp",
+      "count": 2
+    },
+    "hanska": {
+      "name": "Hanska",
+      "count": 1
+    },
+    "milroy": {
+      "name": "Milroy",
+      "count": 1
+    },
+    "vesta": {
+      "name": "Vesta",
+      "count": 1
+    },
+    "corinna-twp": {
+      "name": "Corinna Twp",
+      "count": 1
+    },
+    "ivanhoe": {
+      "name": "Ivanhoe",
+      "count": 1
+    },
+    "minneota": {
+      "name": "Minneota",
+      "count": 1
+    },
+    "tyler": {
+      "name": "Tyler",
+      "count": 2
+    },
+    "hewitt": {
+      "name": "Hewitt",
+      "count": 1
+    },
+    "henning": {
+      "name": "Henning",
+      "count": 2
+    },
+    "excelsior": {
+      "name": "Excelsior",
+      "count": 3
+    },
+    "orono": {
+      "name": "Orono",
+      "count": 1
+    },
+    "frost": {
+      "name": "Frost",
+      "count": 1
+    },
+    "mendota": {
+      "name": "Mendota",
+      "count": 2
+    },
+    "alberta": {
+      "name": "Alberta",
+      "count": 1
+    },
+    "comfort-twp": {
+      "name": "Comfort Twp",
+      "count": 1
+    },
+    "bellingham": {
+      "name": "Bellingham",
+      "count": 2
+    },
+    "new-market-twp": {
+      "name": "New Market Twp",
+      "count": 1
+    },
+    "mantorville-twp": {
+      "name": "Mantorville Twp",
+      "count": 2
+    },
+    "delavan": {
+      "name": "Delavan",
+      "count": 1
+    },
+    "easton": {
+      "name": "Easton",
+      "count": 1
+    },
+    "st-wendel-twp": {
+      "name": "St. Wendel Twp",
+      "count": 1
+    },
+    "kellogg": {
+      "name": "Kellogg",
+      "count": 2
+    },
+    "princeton-twp": {
+      "name": "Princeton Twp",
+      "count": 2
+    },
+    "wyanett-twp": {
+      "name": "Wyanett Twp",
+      "count": 1
+    },
+    "new-munich": {
+      "name": "New Munich",
+      "count": 1
+    },
+    "silver-creek-twp": {
+      "name": "Silver Creek Twp",
+      "count": 1
+    },
+    "minnetonka": {
+      "name": "Minnetonka",
+      "count": 4
+    },
+    "harmony": {
+      "name": "Harmony",
+      "count": 4
+    },
+    "isle-harbor-twp": {
+      "name": "Isle Harbor Twp",
+      "count": 1
+    },
+    "grand-meadow": {
+      "name": "Grand Meadow",
+      "count": 1
+    },
+    "altura": {
+      "name": "Altura",
+      "count": 2
+    },
+    "lansing-twp": {
+      "name": "Lansing Twp",
+      "count": 1
+    },
+    "wyoming": {
+      "name": "Wyoming",
+      "count": 1
+    },
+    "mapleton": {
+      "name": "Mapleton",
+      "count": 1
+    },
+    "orr": {
+      "name": "Orr",
+      "count": 1
+    },
+    "portage-twp": {
+      "name": "Portage Twp",
+      "count": 4
+    },
+    "crane-lake": {
+      "name": "Crane Lake",
+      "count": 1
+    },
+    "camp-5-twp": {
+      "name": "Camp 5 Twp",
+      "count": 1
+    },
+    "kabetogama-twp": {
+      "name": "Kabetogama Twp",
+      "count": 3
+    },
+    "macville-twp": {
+      "name": "Macville Twp",
+      "count": 1
+    },
+    "marion-twp": {
+      "name": "Marion Twp",
+      "count": 1
+    },
+    "mazeppa-twp": {
+      "name": "Mazeppa Twp",
+      "count": 1
+    },
+    "bird-island": {
+      "name": "Bird Island",
+      "count": 2
+    },
+    "st-olaf-twp": {
+      "name": "St. Olaf Twp",
+      "count": 1
+    },
+    "ely": {
+      "name": "Ely",
+      "count": 4
+    },
+    "fall-lake-twp": {
+      "name": "Fall Lake Twp",
+      "count": 1
+    },
+    "winton": {
+      "name": "Winton",
+      "count": 1
+    },
+    "halma": {
+      "name": "Halma",
+      "count": 1
+    },
+    "lake-edward-twp": {
+      "name": "Lake Edward Twp",
+      "count": 1
+    },
+    "morse-twp": {
+      "name": "Morse Twp",
+      "count": 1
+    },
+    "franklin": {
+      "name": "Franklin",
+      "count": 2
+    },
+    "new-richland": {
+      "name": "New Richland",
+      "count": 1
+    },
+    "crooked-creek-twp": {
+      "name": "Crooked Creek Twp",
+      "count": 1
+    },
+    "champlin": {
+      "name": "Champlin",
+      "count": 4
+    },
+    "littlefork": {
+      "name": "Littlefork",
+      "count": 2
+    },
+    "grand-marais": {
+      "name": "Grand Marais",
+      "count": 2
+    },
+    "bertha": {
+      "name": "Bertha",
+      "count": 1
+    },
+    "beatty-twp": {
+      "name": "Beatty Twp",
+      "count": 1
+    },
+    "marble": {
+      "name": "Marble",
+      "count": 1
+    },
+    "claremont": {
+      "name": "Claremont",
+      "count": 1
+    },
+    "hope-twp": {
+      "name": "Hope Twp",
+      "count": 1
+    },
+    "lakeside-twp": {
+      "name": "Lakeside Twp",
+      "count": 2
+    },
+    "glen-twp": {
+      "name": "Glen Twp",
+      "count": 2
+    },
+    "farm-island-twp": {
+      "name": "Farm Island Twp",
+      "count": 1
+    },
+    "nokay-lake-twp": {
+      "name": "Nokay Lake Twp",
+      "count": 1
+    },
+    "wanamingo": {
+      "name": "Wanamingo",
+      "count": 2
+    },
+    "seaforth": {
+      "name": "Seaforth",
+      "count": 1
+    },
+    "strandquist": {
+      "name": "Strandquist",
+      "count": 1
+    },
+    "cobden": {
+      "name": "Cobden",
+      "count": 1
+    },
+    "hancock": {
+      "name": "Hancock",
+      "count": 1
+    },
+    "clontarf": {
+      "name": "Clontarf",
+      "count": 1
+    },
+    "vergas": {
+      "name": "Vergas",
+      "count": 1
+    },
+    "west-concord": {
+      "name": "West Concord",
+      "count": 2
+    },
+    "frazee": {
+      "name": "Frazee",
+      "count": 1
+    },
+    "truman": {
+      "name": "Truman",
+      "count": 1
+    },
+    "gibbon": {
+      "name": "Gibbon",
+      "count": 2
+    },
+    "mentor": {
+      "name": "Mentor",
+      "count": 1
+    },
+    "brooks": {
+      "name": "Brooks",
+      "count": 1
+    },
+    "winger": {
+      "name": "Winger",
+      "count": 1
+    },
+    "carlos": {
+      "name": "Carlos",
+      "count": 1
+    },
+    "new-auburn": {
+      "name": "New Auburn",
+      "count": 2
+    },
+    "dailey-twp": {
+      "name": "Dailey Twp",
+      "count": 1
+    },
+    "northome": {
+      "name": "Northome",
+      "count": 2
+    },
+    "turtle-river": {
+      "name": "Turtle River",
+      "count": 1
+    },
+    "tamarack": {
+      "name": "Tamarack",
+      "count": 1
+    },
+    "goodhue": {
+      "name": "Goodhue",
+      "count": 2
+    },
+    "plymouth": {
+      "name": "Plymouth",
+      "count": 6
+    },
+    "brooten": {
+      "name": "Brooten",
+      "count": 3
+    },
+    "burtrum": {
+      "name": "Burtrum",
+      "count": 1
+    },
+    "clements": {
+      "name": "Clements",
+      "count": 1
+    },
+    "onamia-twp": {
+      "name": "Onamia Twp",
+      "count": 1
+    },
+    "audubon-twp": {
+      "name": "Audubon Twp",
+      "count": 1
+    },
+    "dassel": {
+      "name": "Dassel",
+      "count": 1
+    },
+    "baldwin-twp": {
+      "name": "Baldwin Twp",
+      "count": 1
+    },
+    "darfur": {
+      "name": "Darfur",
+      "count": 1
+    },
+    "comfrey": {
+      "name": "Comfrey",
+      "count": 1
+    },
+    "jeffers": {
+      "name": "Jeffers",
+      "count": 1
+    },
+    "williams": {
+      "name": "Williams",
+      "count": 1
+    },
+    "hartland": {
+      "name": "Hartland",
+      "count": 1
+    },
+    "manchester": {
+      "name": "Manchester",
+      "count": 1
+    },
+    "wood-lake": {
+      "name": "Wood Lake",
+      "count": 1
+    },
+    "leroy": {
+      "name": "LeRoy",
+      "count": 1
+    },
+    "andover": {
+      "name": "Andover",
+      "count": 2
+    },
+    "rothsay": {
+      "name": "Rothsay",
+      "count": 1
+    },
+    "nelson": {
+      "name": "Nelson",
+      "count": 1
+    },
+    "lucan": {
+      "name": "Lucan",
+      "count": 1
+    },
+    "walnut-grove": {
+      "name": "Walnut Grove",
+      "count": 2
+    },
+    "mound-prairie-twp": {
+      "name": "Mound Prairie Twp",
+      "count": 1
+    },
+    "lynd": {
+      "name": "Lynd",
+      "count": 1
+    },
+    "lismore": {
+      "name": "Lismore",
+      "count": 1
+    },
+    "ruthton": {
+      "name": "Ruthton",
+      "count": 1
+    },
+    "russell": {
+      "name": "Russell",
+      "count": 1
+    },
+    "okabena": {
+      "name": "Okabena",
+      "count": 1
+    },
+    "grand-lake-twp": {
+      "name": "Grand Lake Twp",
+      "count": 1
+    },
+    "nunda-twp": {
+      "name": "Nunda Twp",
+      "count": 1
+    },
+    "douglas-twp": {
+      "name": "Douglas Twp",
+      "count": 1
+    },
+    "crane-lake-twp": {
+      "name": "Crane Lake Twp",
+      "count": 1
+    },
+    "donnelly": {
+      "name": "Donnelly",
+      "count": 1
+    },
+    "milan": {
+      "name": "Milan",
+      "count": 1
+    },
+    "babbitt": {
+      "name": "Babbitt",
+      "count": 1
+    },
+    "shevlin": {
+      "name": "Shevlin",
+      "count": 1
+    },
+    "solway": {
+      "name": "Solway",
+      "count": 1
+    },
+    "raymond": {
+      "name": "Raymond",
+      "count": 1
+    },
+    "shoreview": {
+      "name": "Shoreview",
+      "count": 1
+    },
+    "la-grande-twp": {
+      "name": "La Grande Twp",
+      "count": 1
+    },
+    "perham": {
+      "name": "Perham",
+      "count": 1
+    },
+    "oronoco-twp": {
+      "name": "Oronoco Twp",
+      "count": 1
+    },
+    "zumbro-twp": {
+      "name": "Zumbro Twp",
+      "count": 1
+    },
+    "clay-twp": {
+      "name": "Clay Twp",
+      "count": 1
+    },
+    "arco": {
+      "name": "Arco",
+      "count": 1
+    },
+    "new-london-twp": {
+      "name": "New London Twp",
+      "count": 1
+    },
+    "le-roy": {
+      "name": "Le Roy",
+      "count": 1
+    }
+  },
+  "ak": {
+    "anchorage": {
+      "name": "Anchorage",
+      "count": 37
+    },
+    "chugiak": {
+      "name": "Chugiak",
+      "count": 1
+    },
+    "fairbanks": {
+      "name": "Fairbanks",
+      "count": 13
+    },
+    "fairbanks-north-star-borough": {
+      "name": "Fairbanks North Star Borough",
+      "count": 1
+    },
+    "juneau": {
+      "name": "Juneau",
+      "count": 3
+    },
+    "kenai": {
+      "name": "Kenai",
+      "count": 2
+    },
+    "ketchikan": {
+      "name": "Ketchikan",
+      "count": 3
+    },
+    "kodiak": {
+      "name": "Kodiak",
+      "count": 2
+    },
+    "north-pole": {
+      "name": "North Pole",
+      "count": 2
+    },
+    "palmer": {
+      "name": "Palmer",
+      "count": 1
+    },
+    "petersburg-borough": {
+      "name": "Petersburg Borough",
+      "count": 2
+    },
+    "seward": {
+      "name": "Seward",
+      "count": 1
+    },
+    "soldotna": {
+      "name": "Soldotna",
+      "count": 1
+    },
+    "wasilla": {
+      "name": "Wasilla",
+      "count": 9
+    }
+  },
+  "ia": {
+    "floyd": {
+      "name": "Floyd",
+      "count": 1
+    },
+    "council-bluffs": {
+      "name": "Council Bluffs",
+      "count": 11
+    },
+    "cedar-rapids": {
+      "name": "Cedar Rapids",
+      "count": 17
+    },
+    "algona": {
+      "name": "Algona",
+      "count": 4
+    },
+    "storm-lake": {
+      "name": "Storm Lake",
+      "count": 5
+    },
+    "alpha": {
+      "name": "Alpha",
+      "count": 1
+    },
+    "evansdale": {
+      "name": "Evansdale",
+      "count": 1
+    },
+    "north-liberty": {
+      "name": "North Liberty",
+      "count": 2
+    },
+    "le-mars": {
+      "name": "Le Mars",
+      "count": 4
+    },
+    "bedford": {
+      "name": "Bedford",
+      "count": 1
+    },
+    "eagle-grove": {
+      "name": "Eagle Grove",
+      "count": 2
+    },
+    "fort-dodge": {
+      "name": "Fort Dodge",
+      "count": 8
+    },
+    "denison": {
+      "name": "Denison",
+      "count": 3
+    },
+    "alta-vista": {
+      "name": "Alta Vista",
+      "count": 1
+    },
+    "spencer": {
+      "name": "Spencer",
+      "count": 6
+    },
+    "holstein": {
+      "name": "Holstein",
+      "count": 1
+    },
+    "sioux-city": {
+      "name": "Sioux City",
+      "count": 23
+    },
+    "remsen": {
+      "name": "Remsen",
+      "count": 2
+    },
+    "dubuque": {
+      "name": "Dubuque",
+      "count": 9
+    },
+    "farley": {
+      "name": "Farley",
+      "count": 1
+    },
+    "maquoketa": {
+      "name": "Maquoketa",
+      "count": 3
+    },
+    "ames": {
+      "name": "Ames",
+      "count": 4
+    },
+    "linn-grove": {
+      "name": "Linn Grove",
+      "count": 1
+    },
+    "milford": {
+      "name": "Milford",
+      "count": 2
+    },
+    "davenport": {
+      "name": "Davenport",
+      "count": 6
+    },
+    "waterloo": {
+      "name": "Waterloo",
+      "count": 21
+    },
+    "hiawatha": {
+      "name": "Hiawatha",
+      "count": 1
+    },
+    "sheldon": {
+      "name": "Sheldon",
+      "count": 2
+    },
+    "newton": {
+      "name": "Newton",
+      "count": 5
+    },
+    "spirit-lake": {
+      "name": "Spirit Lake",
+      "count": 7
+    },
+    "marshalltown": {
+      "name": "Marshalltown",
+      "count": 7
+    },
+    "toledo": {
+      "name": "Toledo",
+      "count": 2
+    },
+    "knoxville": {
+      "name": "Knoxville",
+      "count": 3
+    },
+    "indianola": {
+      "name": "Indianola",
+      "count": 5
+    },
+    "oskaloosa": {
+      "name": "Oskaloosa",
+      "count": 4
+    },
+    "correctionville": {
+      "name": "Correctionville",
+      "count": 1
+    },
+    "pocahontas": {
+      "name": "Pocahontas",
+      "count": 2
+    },
+    "emmetsburg": {
+      "name": "Emmetsburg",
+      "count": 1
+    },
+    "marion": {
+      "name": "Marion",
+      "count": 2
+    },
+    "sigourney": {
+      "name": "Sigourney",
+      "count": 1
+    },
+    "grundy-center": {
+      "name": "Grundy Center",
+      "count": 1
+    },
+    "camanche": {
+      "name": "Camanche",
+      "count": 2
+    },
+    "lawler": {
+      "name": "Lawler",
+      "count": 1
+    },
+    "holy-cross": {
+      "name": "Holy Cross",
+      "count": 1
+    },
+    "ruthven": {
+      "name": "Ruthven",
+      "count": 1
+    },
+    "doon": {
+      "name": "Doon",
+      "count": 1
+    },
+    "ankeny": {
+      "name": "Ankeny",
+      "count": 4
+    },
+    "arnolds-park": {
+      "name": "Arnolds Park",
+      "count": 7
+    },
+    "carroll": {
+      "name": "Carroll",
+      "count": 3
+    },
+    "bellevue": {
+      "name": "Bellevue",
+      "count": 1
+    },
+    "preston": {
+      "name": "Preston",
+      "count": 1
+    },
+    "sergeant-bluff": {
+      "name": "Sergeant Bluff",
+      "count": 3
+    },
+    "sibley": {
+      "name": "Sibley",
+      "count": 1
+    },
+    "clinton": {
+      "name": "Clinton",
+      "count": 9
+    },
+    "decorah": {
+      "name": "Decorah",
+      "count": 2
+    },
+    "percival": {
+      "name": "Percival",
+      "count": 1
+    },
+    "red-oak": {
+      "name": "Red Oak",
+      "count": 1
+    },
+    "charlotte": {
+      "name": "Charlotte",
+      "count": 1
+    },
+    "lake-mills": {
+      "name": "Lake Mills",
+      "count": 1
+    },
+    "shenandoah": {
+      "name": "Shenandoah",
+      "count": 3
+    },
+    "charles-city": {
+      "name": "Charles City",
+      "count": 4
+    },
+    "waukon": {
+      "name": "Waukon",
+      "count": 1
+    },
+    "des-moines": {
+      "name": "Des Moines",
+      "count": 7
+    },
+    "little-rock": {
+      "name": "Little Rock",
+      "count": 1
+    },
+    "latimer": {
+      "name": "Latimer",
+      "count": 1
+    },
+    "avoca": {
+      "name": "Avoca",
+      "count": 1
+    },
+    "elkader": {
+      "name": "Elkader",
+      "count": 1
+    },
+    "clear-lake": {
+      "name": "Clear Lake",
+      "count": 6
+    },
+    "pleasant-valley": {
+      "name": "Pleasant Valley",
+      "count": 1
+    },
+    "madrid": {
+      "name": "Madrid",
+      "count": 2
+    },
+    "lost-nation": {
+      "name": "Lost Nation",
+      "count": 1
+    },
+    "missouri-valley": {
+      "name": "Missouri Valley",
+      "count": 1
+    },
+    "cedar-falls": {
+      "name": "Cedar Falls",
+      "count": 5
+    },
+    "stacyville": {
+      "name": "Stacyville",
+      "count": 2
+    },
+    "hampton": {
+      "name": "Hampton",
+      "count": 1
+    },
+    "pella": {
+      "name": "Pella",
+      "count": 1
+    },
+    "princeton": {
+      "name": "Princeton",
+      "count": 1
+    },
+    "lowden": {
+      "name": "Lowden",
+      "count": 1
+    },
+    "goose-lake": {
+      "name": "Goose Lake",
+      "count": 1
+    },
+    "greenfield": {
+      "name": "Greenfield",
+      "count": 1
+    },
+    "royal": {
+      "name": "Royal",
+      "count": 1
+    },
+    "wyoming": {
+      "name": "Wyoming",
+      "count": 1
+    },
+    "dysart": {
+      "name": "Dysart",
+      "count": 1
+    },
+    "ionia": {
+      "name": "Ionia",
+      "count": 1
+    },
+    "bettendorf": {
+      "name": "Bettendorf",
+      "count": 1
+    },
+    "altoona": {
+      "name": "Altoona",
+      "count": 1
+    },
+    "atlantic": {
+      "name": "Atlantic",
+      "count": 1
+    },
+    "boone": {
+      "name": "Boone",
+      "count": 2
+    },
+    "burlington": {
+      "name": "Burlington",
+      "count": 1
+    },
+    "chariton": {
+      "name": "Chariton",
+      "count": 1
+    },
+    "clarinda": {
+      "name": "Clarinda",
+      "count": 1
+    },
+    "eldora": {
+      "name": "Eldora",
+      "count": 1
+    },
+    "estherville": {
+      "name": "Estherville",
+      "count": 3
+    },
+    "fairfield": {
+      "name": "Fairfield",
+      "count": 1
+    },
+    "grinnell": {
+      "name": "Grinnell",
+      "count": 2
+    },
+    "harlan": {
+      "name": "Harlan",
+      "count": 1
+    },
+    "iowa-city": {
+      "name": "Iowa City",
+      "count": 2
+    },
+    "jefferson": {
+      "name": "Jefferson",
+      "count": 1
+    },
+    "keokuk": {
+      "name": "Keokuk",
+      "count": 2
+    },
+    "mason-city": {
+      "name": "Mason City",
+      "count": 7
+    },
+    "mount-pleasant": {
+      "name": "Mount Pleasant",
+      "count": 2
+    },
+    "muscatine": {
+      "name": "Muscatine",
+      "count": 3
+    },
+    "ottumwa": {
+      "name": "Ottumwa",
+      "count": 3
+    },
+    "perry": {
+      "name": "Perry",
+      "count": 1
+    },
+    "pleasant-hill": {
+      "name": "Pleasant Hill",
+      "count": 1
+    },
+    "waverly": {
+      "name": "Waverly",
+      "count": 1
+    },
+    "waukee": {
+      "name": "Waukee",
+      "count": 1
+    },
+    "webster-city": {
+      "name": "Webster City",
+      "count": 1
+    },
+    "west-des-moines": {
+      "name": "West Des Moines",
+      "count": 2
+    },
+    "windsor-heights": {
+      "name": "Windsor Heights",
+      "count": 1
+    },
+    "cherokee": {
+      "name": "Cherokee",
+      "count": 1
+    },
+    "fort-madison": {
+      "name": "Fort Madison",
+      "count": 1
+    },
+    "grimes": {
+      "name": "Grimes",
+      "count": 1
+    },
+    "ida-grove": {
+      "name": "Ida Grove",
+      "count": 1
+    },
+    "diagonal": {
+      "name": "Diagonal",
+      "count": 1
+    },
+    "mondamin": {
+      "name": "Mondamin",
+      "count": 2
+    },
+    "hawkeye": {
+      "name": "Hawkeye",
+      "count": 1
+    },
+    "hinton": {
+      "name": "Hinton",
+      "count": 1
+    },
+    "dewar": {
+      "name": "Dewar",
+      "count": 1
+    },
+    "saint-donatus": {
+      "name": "Saint Donatus",
+      "count": 1
+    },
+    "monticello": {
+      "name": "Monticello",
+      "count": 1
+    },
+    "new-hampton": {
+      "name": "New Hampton",
+      "count": 2
+    },
+    "elkhart": {
+      "name": "Elkhart",
+      "count": 2
+    },
+    "rock-valley": {
+      "name": "Rock Valley",
+      "count": 1
+    },
+    "peosta": {
+      "name": "Peosta",
+      "count": 2
+    },
+    "glenwood": {
+      "name": "Glenwood",
+      "count": 2
+    },
+    "manchester": {
+      "name": "Manchester",
+      "count": 1
+    },
+    "lime-springs": {
+      "name": "Lime Springs",
+      "count": 1
+    },
+    "luana": {
+      "name": "Luana",
+      "count": 1
+    },
+    "de-witt": {
+      "name": "De Witt",
+      "count": 2
+    },
+    "mapleton": {
+      "name": "Mapleton",
+      "count": 2
+    },
+    "duncombe": {
+      "name": "Duncombe",
+      "count": 1
+    },
+    "marquette": {
+      "name": "Marquette",
+      "count": 1
+    },
+    "corning": {
+      "name": "Corning",
+      "count": 2
+    },
+    "lacona": {
+      "name": "Lacona",
+      "count": 1
+    },
+    "slater": {
+      "name": "Slater",
+      "count": 1
+    },
+    "fairbank": {
+      "name": "Fairbank",
+      "count": 1
+    },
+    "panama": {
+      "name": "Panama",
+      "count": 1
+    },
+    "centerville": {
+      "name": "Centerville",
+      "count": 1
+    },
+    "dyersville": {
+      "name": "Dyersville",
+      "count": 1
+    },
+    "earlville": {
+      "name": "Earlville",
+      "count": 1
+    },
+    "northwood": {
+      "name": "Northwood",
+      "count": 3
+    },
+    "breda": {
+      "name": "Breda",
+      "count": 1
+    },
+    "le-claire": {
+      "name": "Le Claire",
+      "count": 1
+    },
+    "waucoma": {
+      "name": "Waucoma",
+      "count": 1
+    },
+    "chester": {
+      "name": "Chester",
+      "count": 1
+    },
+    "osage": {
+      "name": "Osage",
+      "count": 2
+    },
+    "sac-city": {
+      "name": "Sac City",
+      "count": 1
+    },
+    "corwith": {
+      "name": "Corwith",
+      "count": 1
+    },
+    "graettinger": {
+      "name": "Graettinger",
+      "count": 1
+    },
+    "lake-park": {
+      "name": "Lake Park",
+      "count": 1
+    },
+    "defiance": {
+      "name": "Defiance",
+      "count": 1
+    },
+    "okoboji": {
+      "name": "Okoboji",
+      "count": 1
+    },
+    "fairfax": {
+      "name": "Fairfax",
+      "count": 1
+    },
+    "guttenberg": {
+      "name": "Guttenberg",
+      "count": 1
+    },
+    "olin": {
+      "name": "Olin",
+      "count": 1
+    },
+    "oelwein": {
+      "name": "Oelwein",
+      "count": 1
+    },
+    "sumner": {
+      "name": "Sumner",
+      "count": 1
+    },
+    "blue-grass": {
+      "name": "Blue Grass",
+      "count": 1
+    },
+    "riceville": {
+      "name": "Riceville",
+      "count": 1
+    },
+    "cascade": {
+      "name": "Cascade",
+      "count": 1
+    },
+    "belmond": {
+      "name": "Belmond",
+      "count": 1
+    },
+    "independence": {
+      "name": "Independence",
+      "count": 1
+    },
+    "marcus": {
+      "name": "Marcus",
+      "count": 1
+    },
+    "calmar": {
+      "name": "Calmar",
+      "count": 1
+    },
+    "tripoli": {
+      "name": "Tripoli",
+      "count": 1
+    },
+    "rockford": {
+      "name": "Rockford",
+      "count": 1
+    },
+    "hawarden": {
+      "name": "Hawarden",
+      "count": 1
+    },
+    "alton": {
+      "name": "Alton",
+      "count": 1
+    },
+    "stanwood": {
+      "name": "Stanwood",
+      "count": 1
+    },
+    "mineola": {
+      "name": "Mineola",
+      "count": 1
+    },
+    "iowa-falls": {
+      "name": "Iowa Falls",
+      "count": 1
+    },
+    "tama": {
+      "name": "Tama",
+      "count": 1
+    },
+    "walford": {
+      "name": "Walford",
+      "count": 1
+    },
+    "zearing": {
+      "name": "Zearing",
+      "count": 1
+    },
+    "new-albin": {
+      "name": "New Albin",
+      "count": 1
+    }
+  },
+  "wi": {
+    "milwaukee": {
+      "name": "Milwaukee",
+      "count": 7
+    },
+    "greenfield": {
+      "name": "Greenfield",
+      "count": 2
+    },
+    "wausau": {
+      "name": "Wausau",
+      "count": 2
+    },
+    "iron-ridge": {
+      "name": "Iron Ridge",
+      "count": 2
+    },
+    "mayville": {
+      "name": "Mayville",
+      "count": 1
+    },
+    "madison": {
+      "name": "Madison",
+      "count": 7
+    },
+    "durand": {
+      "name": "Durand",
+      "count": 2
+    },
+    "almond": {
+      "name": "Almond",
+      "count": 1
+    },
+    "eau-claire": {
+      "name": "Eau Claire",
+      "count": 6
+    },
+    "south-milwaukee": {
+      "name": "South Milwaukee",
+      "count": 1
+    },
+    "watertown": {
+      "name": "Watertown",
+      "count": 5
+    },
+    "racine": {
+      "name": "Racine",
+      "count": 7
+    },
+    "waupun": {
+      "name": "Waupun",
+      "count": 3
+    },
+    "mondovi": {
+      "name": "Mondovi",
+      "count": 2
+    },
+    "berlin": {
+      "name": "Berlin",
+      "count": 3
+    },
+    "germantown": {
+      "name": "Germantown",
+      "count": 3
+    },
+    "menasha": {
+      "name": "Menasha",
+      "count": 1
+    },
+    "brookfield": {
+      "name": "Brookfield",
+      "count": 3
+    },
+    "muskego": {
+      "name": "Muskego",
+      "count": 2
+    },
+    "west-bend": {
+      "name": "West Bend",
+      "count": 1
+    },
+    "stevens-point": {
+      "name": "Stevens Point",
+      "count": 9
+    },
+    "chippewa-falls": {
+      "name": "Chippewa Falls",
+      "count": 4
+    },
+    "sheboygan": {
+      "name": "Sheboygan",
+      "count": 6
+    },
+    "oshkosh": {
+      "name": "Oshkosh",
+      "count": 2
+    },
+    "plover": {
+      "name": "Plover",
+      "count": 2
+    },
+    "fort-atkinson": {
+      "name": "Fort Atkinson",
+      "count": 1
+    },
+    "franklin": {
+      "name": "Franklin",
+      "count": 3
+    },
+    "hales-corners": {
+      "name": "Hales Corners",
+      "count": 1
+    },
+    "kenosha": {
+      "name": "Kenosha",
+      "count": 9
+    },
+    "beaver-dam": {
+      "name": "Beaver Dam",
+      "count": 3
+    },
+    "medford": {
+      "name": "Medford",
+      "count": 1
+    },
+    "menomonee-falls": {
+      "name": "Menomonee Falls",
+      "count": 1
+    },
+    "gilmanton": {
+      "name": "Gilmanton",
+      "count": 1
+    },
+    "cedarburg": {
+      "name": "Cedarburg",
+      "count": 2
+    },
+    "union-grove": {
+      "name": "Union Grove",
+      "count": 3
+    },
+    "hatley": {
+      "name": "Hatley",
+      "count": 2
+    },
+    "darlington": {
+      "name": "Darlington",
+      "count": 2
+    },
+    "custer": {
+      "name": "Custer",
+      "count": 2
+    },
+    "park-falls": {
+      "name": "Park Falls",
+      "count": 1
+    },
+    "hazel-green": {
+      "name": "Hazel Green",
+      "count": 2
+    },
+    "marinette": {
+      "name": "Marinette",
+      "count": 1
+    },
+    "adams": {
+      "name": "Adams",
+      "count": 1
+    },
+    "waukesha": {
+      "name": "Waukesha",
+      "count": 2
+    },
+    "big-bend": {
+      "name": "Big Bend",
+      "count": 1
+    },
+    "waunakee": {
+      "name": "Waunakee",
+      "count": 1
+    },
+    "mukwonago": {
+      "name": "Mukwonago",
+      "count": 1
+    },
+    "mosinee": {
+      "name": "Mosinee",
+      "count": 1
+    },
+    "plum-city": {
+      "name": "Plum City",
+      "count": 2
+    },
+    "butte-des-morts": {
+      "name": "Butte Des Morts",
+      "count": 1
+    },
+    "arlington": {
+      "name": "Arlington",
+      "count": 1
+    },
+    "malone": {
+      "name": "Malone",
+      "count": 1
+    },
+    "new-richmond": {
+      "name": "New Richmond",
+      "count": 3
+    },
+    "tigerton": {
+      "name": "Tigerton",
+      "count": 1
+    },
+    "hillsboro": {
+      "name": "Hillsboro",
+      "count": 1
+    },
+    "green-lake": {
+      "name": "Green Lake",
+      "count": 1
+    },
+    "bruce": {
+      "name": "Bruce",
+      "count": 1
+    },
+    "wisconsin-dells": {
+      "name": "Wisconsin Dells",
+      "count": 3
+    },
+    "richland-center": {
+      "name": "Richland Center",
+      "count": 1
+    },
+    "new-berlin": {
+      "name": "New Berlin",
+      "count": 3
+    },
+    "rosholt": {
+      "name": "Rosholt",
+      "count": 1
+    },
+    "cashton": {
+      "name": "Cashton",
+      "count": 1
+    },
+    "rice-lake": {
+      "name": "Rice Lake",
+      "count": 2
+    },
+    "westfield": {
+      "name": "Westfield",
+      "count": 1
+    },
+    "twin-lakes": {
+      "name": "Twin Lakes",
+      "count": 1
+    },
+    "east-troy": {
+      "name": "East Troy",
+      "count": 1
+    },
+    "tomahawk": {
+      "name": "Tomahawk",
+      "count": 1
+    },
+    "marshfield": {
+      "name": "Marshfield",
+      "count": 1
+    },
+    "manitowoc": {
+      "name": "Manitowoc",
+      "count": 2
+    },
+    "greendale": {
+      "name": "Greendale",
+      "count": 1
+    },
+    "campbellsport": {
+      "name": "Campbellsport",
+      "count": 2
+    },
+    "somerset": {
+      "name": "Somerset",
+      "count": 1
+    },
+    "cudahy": {
+      "name": "Cudahy",
+      "count": 2
+    },
+    "mc-farland": {
+      "name": "Mc Farland",
+      "count": 3
+    },
+    "waldo": {
+      "name": "Waldo",
+      "count": 1
+    },
+    "rothschild": {
+      "name": "Rothschild",
+      "count": 1
+    },
+    "monroe": {
+      "name": "Monroe",
+      "count": 1
+    },
+    "stoughton": {
+      "name": "Stoughton",
+      "count": 1
+    },
+    "hartford": {
+      "name": "Hartford",
+      "count": 1
+    },
+    "edgerton": {
+      "name": "Edgerton",
+      "count": 1
+    },
+    "arkdale": {
+      "name": "Arkdale",
+      "count": 1
+    },
+    "neshkoro": {
+      "name": "Neshkoro",
+      "count": 2
+    },
+    "sheboygan-falls": {
+      "name": "Sheboygan Falls",
+      "count": 1
+    },
+    "kewaskum": {
+      "name": "Kewaskum",
+      "count": 1
+    },
+    "merrill": {
+      "name": "Merrill",
+      "count": 1
+    },
+    "athens": {
+      "name": "Athens",
+      "count": 1
+    },
+    "osceola": {
+      "name": "Osceola",
+      "count": 1
+    },
+    "butler": {
+      "name": "Butler",
+      "count": 1
+    },
+    "cottage-grove": {
+      "name": "Cottage Grove",
+      "count": 2
+    },
+    "deerbrook": {
+      "name": "Deerbrook",
+      "count": 1
+    },
+    "barnes": {
+      "name": "Barnes",
+      "count": 1
+    },
+    "antigo": {
+      "name": "Antigo",
+      "count": 1
+    },
+    "new-lisbon": {
+      "name": "New Lisbon",
+      "count": 1
+    },
+    "mauston": {
+      "name": "Mauston",
+      "count": 1
+    },
+    "sussex": {
+      "name": "Sussex",
+      "count": 1
+    },
+    "random-lake": {
+      "name": "Random Lake",
+      "count": 1
+    },
+    "port-washington": {
+      "name": "Port Washington",
+      "count": 1
+    },
+    "la-farge": {
+      "name": "La Farge",
+      "count": 1
+    },
+    "weston": {
+      "name": "Weston",
+      "count": 1
+    },
+    "prescott": {
+      "name": "Prescott",
+      "count": 1
+    },
+    "greenwood": {
+      "name": "Greenwood",
+      "count": 1
+    },
+    "nekoosa": {
+      "name": "Nekoosa",
+      "count": 1
+    },
+    "west-allis": {
+      "name": "West Allis",
+      "count": 1
+    },
+    "burlington": {
+      "name": "Burlington",
+      "count": 1
+    },
+    "denmark": {
+      "name": "Denmark",
+      "count": 1
+    },
+    "lodi": {
+      "name": "Lodi",
+      "count": 1
+    },
+    "conover": {
+      "name": "Conover",
+      "count": 1
+    },
+    "fond-du-lac": {
+      "name": "Fond Du Lac",
+      "count": 3
+    },
+    "monona": {
+      "name": "Monona",
+      "count": 1
+    },
+    "south-range": {
+      "name": "South Range",
+      "count": 1
+    },
+    "wild-rose": {
+      "name": "Wild Rose",
+      "count": 1
+    },
+    "woodville": {
+      "name": "Woodville",
+      "count": 1
+    },
+    "lancaster": {
+      "name": "Lancaster",
+      "count": 1
+    },
+    "baraboo": {
+      "name": "Baraboo",
+      "count": 1
+    },
+    "hudson": {
+      "name": "Hudson",
+      "count": 2
+    },
+    "genoa-city": {
+      "name": "Genoa City",
+      "count": 1
+    },
+    "westby": {
+      "name": "Westby",
+      "count": 1
+    },
+    "eden": {
+      "name": "Eden",
+      "count": 1
+    },
+    "mercer": {
+      "name": "Mercer",
+      "count": 1
+    },
+    "rhinelander": {
+      "name": "Rhinelander",
+      "count": 1
+    },
+    "wisconsin-rapids": {
+      "name": "Wisconsin Rapids",
+      "count": 1
+    },
+    "cassville": {
+      "name": "Cassville",
+      "count": 2
+    },
+    "gilman": {
+      "name": "Gilman",
+      "count": 1
+    },
+    "columbus": {
+      "name": "Columbus",
+      "count": 1
+    },
+    "hartland": {
+      "name": "Hartland",
+      "count": 2
+    },
+    "arcadia": {
+      "name": "Arcadia",
+      "count": 1
+    },
+    "eagle-river": {
+      "name": "Eagle River",
+      "count": 1
+    },
+    "superior": {
+      "name": "Superior",
+      "count": 1
+    },
+    "holcombe": {
+      "name": "Holcombe",
+      "count": 1
+    },
+    "hubertus": {
+      "name": "Hubertus",
+      "count": 2
+    },
+    "howards-grove": {
+      "name": "Howards Grove",
+      "count": 1
+    },
+    "de-pere": {
+      "name": "De Pere",
+      "count": 1
+    },
+    "onalaska": {
+      "name": "Onalaska",
+      "count": 1
+    },
+    "edgar": {
+      "name": "Edgar",
+      "count": 1
+    },
+    "cleveland": {
+      "name": "Cleveland",
+      "count": 1
+    },
+    "mequon": {
+      "name": "Mequon",
+      "count": 1
+    },
+    "phelps": {
+      "name": "Phelps",
+      "count": 1
+    }
+  }
+}
