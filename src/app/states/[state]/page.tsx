@@ -42,6 +42,7 @@ export default function StatePage({ params }: PageProps) {
         zoom={stateInfo.zoom}
         stateName={stateInfo.name}
         count={stateLocations.length}
+        stateKey={params.state}
       />
 
       {/* City directory */}
