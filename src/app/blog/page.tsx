@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { blogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'Blog — Pull Tab Tips, News & Guides',
-  description: 'Learn about pull tabs, charitable gaming strategies, and find tips for playing across Minnesota, Alaska, Iowa, and Wisconsin.',
+  title: 'Pull Tab Blog — Tips, Strategies & Charitable Gaming News',
+  description: 'Pull tab tips, e-tab strategies, and charitable gaming guides. Learn how to find pull tabs, play smarter, and support your community across Minnesota, Alaska, Iowa, and Wisconsin.',
+  keywords: ['pull tab tips', 'pull tab strategy', 'charitable gaming guide', 'e-tabs guide', 'how to play pull tabs', 'Minnesota charitable gambling'],
 };
 
 export default function BlogPage() {

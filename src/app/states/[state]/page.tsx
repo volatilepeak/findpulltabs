@@ -16,9 +16,24 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const stateInfo = STATES[params.state];
   if (!stateInfo) return {};
   const count = getLocationsByState(stateInfo.abbr).length;
+  const abbr = stateInfo.abbr;
   return {
-    title: `Pull Tab Locations in ${stateInfo.name} — ${count} Venues`,
-    description: `Find ${count} pull tab locations in ${stateInfo.name}. Browse bars, VFW posts, American Legion halls, and more by city.`,
+    title: `Pull Tabs in ${stateInfo.name} — ${count} Pull Tab, E-Tab & Bingo Locations`,
+    description: `${stateInfo.name} has ${count} pull tab locations. Find pull tabs, e-tabs, bingo, and charitable gambling near you in ${abbr}. Browse bars, VFW posts, American Legion halls, Eagles clubs, and more by city with directions.`,
+    keywords: [
+      `pull tabs ${stateInfo.name}`,
+      `pull tabs near me ${abbr}`,
+      `e-tabs ${stateInfo.name}`,
+      `bingo ${stateInfo.name}`,
+      `charitable gambling ${stateInfo.name}`,
+      `${stateInfo.name} pull tab locations`,
+      `find pull tabs ${abbr}`,
+      `VFW pull tabs ${abbr}`,
+    ],
+    openGraph: {
+      title: `Pull Tabs in ${stateInfo.name} — ${count} Locations | FindPullTabs`,
+      description: `Find ${count} pull tab, e-tab, and bingo locations in ${stateInfo.name}. Browse by city with directions.`,
+    },
   };
 }
 

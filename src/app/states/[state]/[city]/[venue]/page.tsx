@@ -44,9 +44,22 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const locs = getLocationsForCity(stateInfo.abbr, params.city);
   const loc = locs.find((l) => getVenueSlug(l) === params.venue);
   if (!loc) return {};
+  const abbr = stateInfo.abbr;
+  const games = [loc.hasPullTabs && 'pull tabs', loc.hasBingo && 'e-tabs'].filter(Boolean).join(', ');
   return {
-    title: `${loc.name} — Pull Tabs in ${loc.city}, ${stateInfo.abbr}`,
-    description: `${loc.name} at ${loc.address}. Find pull tabs, get directions, and save to favorites. ${getTypeLabel(loc.type)} in ${loc.city}, ${stateInfo.name}.`,
+    title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr} | FindPullTabs`,
+    description: `Find ${games || 'pull tabs'} at ${loc.name} in ${loc.city}, ${stateInfo.name}. ${loc.address}. Get directions, hours, and save to favorites. ${getTypeLabel(loc.type)} offering charitable gaming.`,
+    keywords: [
+      `${loc.name} pull tabs`,
+      `pull tabs ${loc.city} ${abbr}`,
+      `e-tabs ${loc.city}`,
+      `${getTypeLabel(loc.type)} pull tabs`,
+      `charitable gambling ${loc.city}`,
+    ],
+    openGraph: {
+      title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr}`,
+      description: `Find ${games || 'pull tabs'} at ${loc.name}, ${loc.address}. Get directions on FindPullTabs.`,
+    },
   };
 }
 

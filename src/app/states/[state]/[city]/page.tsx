@@ -25,9 +25,22 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const locs = getLocationsForCity(stateInfo.abbr, params.city);
   if (locs.length === 0) return {};
   const cityName = locs[0].city;
+  const abbr = stateInfo.abbr;
   return {
-    title: `Pull Tabs in ${cityName}, ${stateInfo.abbr} — ${locs.length} Locations`,
-    description: `Find ${locs.length} pull tab locations in ${cityName}, ${stateInfo.name}. Bars, VFW posts, American Legion halls, and more.`,
+    title: `Pull Tabs in ${cityName}, ${abbr} — ${locs.length} Pull Tab & E-Tab Locations`,
+    description: `${cityName}, ${stateInfo.name} has ${locs.length} pull tab locations. Find pull tabs, e-tabs, and bingo near you. Browse bars, VFW posts, American Legion halls, and more with hours, prices, and directions.`,
+    keywords: [
+      `pull tabs ${cityName} ${abbr}`,
+      `pull tabs near me ${cityName}`,
+      `e-tabs ${cityName}`,
+      `bingo ${cityName} ${abbr}`,
+      `charitable gambling ${cityName}`,
+      `bars with pull tabs ${cityName}`,
+    ],
+    openGraph: {
+      title: `Pull Tabs in ${cityName}, ${abbr} — ${locs.length} Locations | FindPullTabs`,
+      description: `Find ${locs.length} pull tab and e-tab locations in ${cityName}, ${stateInfo.name} with directions.`,
+    },
   };
 }
 
@@ -92,9 +105,17 @@ export default function CityPage({ params }: PageProps) {
                       {loc.name}
                     </h3>
                   </Link>
-                  <span className="inline-flex items-center gap-1 text-xs text-charcoal-400 mb-3">
+                  <span className="inline-flex items-center gap-1 text-xs text-charcoal-400 mb-2">
                     {getTypeIcon(loc.type)} {getTypeLabel(loc.type)}
                   </span>
+                  <div className="flex gap-1.5 mb-3">
+                    {loc.hasPullTabs && (
+                      <span className="text-[11px] bg-gold-300/10 text-gold-300 px-1.5 py-0.5 rounded">Pull Tabs</span>
+                    )}
+                    {loc.hasBingo && (
+                      <span className="text-[11px] bg-blue-400/10 text-blue-400 px-1.5 py-0.5 rounded">E-Tabs</span>
+                    )}
+                  </div>
                   <p className="text-sm text-charcoal-300 mb-4">{loc.address}</p>
                   <div className="flex gap-2">
                     <Link
@@ -123,14 +144,23 @@ export default function CityPage({ params }: PageProps) {
       <section className="bg-charcoal-900 py-12 border-t border-charcoal-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-xl font-bold text-cream-200 mb-3">
-            About Pull Tabs in {cityName}
+            Pull Tabs, E-Tabs &amp; Bingo in {cityName}, {stateInfo.abbr}
           </h2>
-          <p className="text-charcoal-300 text-sm leading-relaxed">
-            {cityName}, {stateInfo.name} has {cityLocations.length} pull tab{' '}
-            {cityLocations.length !== 1 ? 'locations' : 'location'} listed on FindPullTabs.
-            Pull tabs are a form of charitable gaming where proceeds support local nonprofits and community organizations.
-            Visit any of the venues listed above to play pull tabs and support charitable causes in {cityName}.
-          </p>
+          <div className="text-charcoal-300 text-sm leading-relaxed space-y-3">
+            <p>
+              {cityName}, {stateInfo.name} has {cityLocations.length} pull tab
+              {cityLocations.length !== 1 ? ' locations' : ' location'} listed on FindPullTabs.
+              Find pull tabs, electronic pull tabs (e-tabs), bingo, and other charitable gambling
+              games at bars, VFW posts, American Legion halls, Eagles clubs, and other venues in {cityName}.
+            </p>
+            <p>
+              Pull tabs are a form of charitable gaming regulated by the {stateInfo.name} Gambling Control Board.
+              When you play pull tabs in {cityName}, proceeds support local nonprofits, veterans&apos;
+              organizations, youth sports, and community programs. Browse the {cityLocations.length}{' '}
+              {cityLocations.length !== 1 ? 'locations' : 'location'} above to find pull tabs near you
+              in {cityName}, get directions, and save your favorites.
+            </p>
+          </div>
         </div>
       </section>
     </div>
