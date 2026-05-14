@@ -12,8 +12,10 @@ import {
   formatAddress,
   getDirectionsUrl,
 } from '@/lib/data';
+import { getVenueHours, DAY_LABELS } from '@/lib/hours';
 import { VenueClient } from './VenueClient';
 import { VenueMapClient } from './VenueMapClient';
+import { SubmitHoursForm } from './SubmitHoursForm';
 
 interface PageProps {
   params: { state: string; city: string; venue: string };
@@ -48,17 +50,18 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const games = [loc.hasPullTabs && 'pull tabs', loc.hasBingo && 'e-tabs'].filter(Boolean).join(', ');
   return {
     title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr} | FindPullTabs`,
-    description: `Find ${games || 'pull tabs'} at ${loc.name} in ${loc.city}, ${stateInfo.name}. ${loc.address}. Get directions, hours, and save to favorites. ${getTypeLabel(loc.type)} offering charitable gaming.`,
+    description: `Find ${games || 'pull tabs'} at ${loc.name} in ${loc.city}, ${stateInfo.name}. ${loc.address}. Get directions, gambling hours, and save to favorites. ${getTypeLabel(loc.type)} offering charitable gaming.`,
     keywords: [
       `${loc.name} pull tabs`,
       `pull tabs ${loc.city} ${abbr}`,
       `e-tabs ${loc.city}`,
       `${getTypeLabel(loc.type)} pull tabs`,
       `charitable gambling ${loc.city}`,
+      `pull tab hours ${loc.city}`,
     ],
     openGraph: {
       title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr}`,
-      description: `Find ${games || 'pull tabs'} at ${loc.name}, ${loc.address}. Get directions on FindPullTabs.`,
+      description: `Find ${games || 'pull tabs'} at ${loc.name}, ${loc.address}. Get directions and gambling hours on FindPullTabs.`,
     },
   };
 }
@@ -72,6 +75,7 @@ export default function VenuePage({ params }: PageProps) {
   if (!location) notFound();
 
   const nearby = locs.filter((l) => l.id !== location.id).slice(0, 6);
+  const hours = getVenueHours(params.state, params.city, params.venue);
 
   return (
     <div className="bg-charcoal-950 min-h-screen">
@@ -92,6 +96,7 @@ export default function VenuePage({ params }: PageProps) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
+            {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <span className="text-2xl">{getTypeIcon(location.type)}</span>
@@ -109,6 +114,7 @@ export default function VenuePage({ params }: PageProps) {
               )}
             </div>
 
+            {/* Info card */}
             <div className="glass rounded-xl p-6 mb-6 space-y-4">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-gold-300 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -130,12 +136,64 @@ export default function VenuePage({ params }: PageProps) {
                   <p className="text-sm font-medium text-cream-200">Games Available</p>
                   <div className="flex gap-2 mt-1">
                     {location.hasPullTabs && <span className="text-xs bg-gold-300/10 text-gold-300 px-2 py-0.5 rounded-full">Pull Tabs</span>}
-                    {location.hasBingo && <span className="text-xs bg-blue-400/10 text-blue-400 px-2 py-0.5 rounded-full">Bingo</span>}
+                    {location.hasBingo && <span className="text-xs bg-blue-400/10 text-blue-400 px-2 py-0.5 rounded-full">E-Tabs</span>}
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Gambling Hours */}
+            <div className="glass rounded-xl p-6 mb-6">
+              <div className="flex items-center gap-2 mb-4">
+                <svg className="w-5 h-5 text-gold-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <h2 className="font-display text-lg font-semibold text-cream-200">Gambling Hours</h2>
+              </div>
+
+              {hours ? (
+                <div>
+                  {hours.sellerType && (
+                    <div className="mb-3">
+                      <span className="text-xs font-medium text-charcoal-300 bg-charcoal-800 px-2 py-1 rounded">
+                        Seller Type: {hours.sellerType === 'booth' ? '🎪 Booth' : hours.sellerType === 'bar' ? '🍺 Bar' : 'Unknown'}
+                      </span>
+                    </div>
+                  )}
+                  <div className="space-y-1.5">
+                    {DAY_LABELS.map(({ key, label }) => {
+                      const value = hours[key as keyof typeof hours];
+                      return value ? (
+                        <div key={key} className="flex items-center justify-between text-sm">
+                          <span className="text-charcoal-300 w-24">{label}</span>
+                          <span className="text-cream-200 font-medium">{value as string}</span>
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                  {hours.notes && (
+                    <p className="text-xs text-charcoal-400 mt-3 italic">{hours.notes}</p>
+                  )}
+                  {hours.lastUpdated && (
+                    <p className="text-xs text-charcoal-500 mt-2">Last updated: {hours.lastUpdated}</p>
+                  )}
+                </div>
+              ) : (
+                <div className="text-center py-4">
+                  <p className="text-sm text-charcoal-400 mb-3">
+                    Gambling hours not yet listed for this venue.
+                  </p>
+                  <SubmitHoursForm venueName={location.name} venueAddress={location.address} />
+                </div>
+              )}
+
+              {hours && (
+                <div className="mt-4 pt-4 border-t border-charcoal-800">
+                  <p className="text-xs text-charcoal-500 mb-2">Hours incorrect?</p>
+                  <SubmitHoursForm venueName={location.name} venueAddress={location.address} isUpdate />
+                </div>
+              )}
+            </div>
+
+            {/* Actions */}
             <div className="flex flex-wrap gap-3 mb-8">
               <a href={getDirectionsUrl(location)} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 text-sm font-semibold bg-gold-300 hover:bg-gold-400 text-charcoal-900 rounded-xl transition-colors shadow-lg">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
@@ -144,6 +202,7 @@ export default function VenuePage({ params }: PageProps) {
               <VenueClient locationId={location.id} />
             </div>
 
+            {/* Claim CTA */}
             <div className="glass rounded-xl p-6 border border-gold-300/20">
               <h3 className="font-display text-lg font-semibold text-cream-200 mb-2">Is this your venue?</h3>
               <p className="text-sm text-charcoal-400 mb-4">Claim this listing to update hours, add photos, and manage your venue&apos;s profile on FindPullTabs.</p>
@@ -157,6 +216,7 @@ export default function VenuePage({ params }: PageProps) {
             </div>
           </div>
 
+          {/* Right column */}
           <div className="lg:col-span-1 space-y-6">
             <div className="glass rounded-xl overflow-hidden h-64">
               <VenueMapClient lat={location.lat} lng={location.lng} name={location.name} />
@@ -182,12 +242,23 @@ export default function VenuePage({ params }: PageProps) {
         </div>
       </div>
 
+      {/* Schema.org with hours */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: location.name,
         address: { '@type': 'PostalAddress', streetAddress: location.address, addressLocality: location.city, addressRegion: location.state, postalCode: location.zip || undefined },
         geo: { '@type': 'GeoCoordinates', latitude: location.lat, longitude: location.lng },
+        ...(hours ? {
+          openingHoursSpecification: DAY_LABELS
+            .filter(({ key }) => hours[key as keyof typeof hours])
+            .map(({ key, label }) => ({
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: label,
+              opens: (hours[key as keyof typeof hours] as string)?.split(' - ')[0] || '',
+              closes: (hours[key as keyof typeof hours] as string)?.split(' - ')[1] || '',
+            })),
+        } : {}),
       }) }} />
     </div>
   );
