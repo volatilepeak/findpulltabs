@@ -161,26 +161,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Map Section — clean, no overlays except desktop sidebar */}
-      <section className="relative h-[65vh] sm:h-[70vh] min-h-[350px]">
-        <LeafletMap
-          locations={filteredLocations}
-          center={mapCenter}
-          zoom={mapZoom}
-          height="100%"
-        />
+      {/* Map + Sidebar Section */}
+      <section className="relative h-[65vh] sm:h-[70vh] min-h-[350px] flex">
+        {/* Map takes remaining space */}
+        <div className="flex-1 relative">
+          <LeafletMap
+            locations={filteredLocations}
+            center={mapCenter}
+            zoom={mapZoom}
+            height="100%"
+          />
 
-        {/* Mobile list toggle */}
-        <button
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute bottom-4 right-4 z-[40] glass px-4 py-2.5 rounded-xl text-sm font-medium text-gold-300 hover:text-gold-200 transition-colors md:hidden"
-        >
-          {sidebarOpen ? 'Back to Map' : `List (${filteredLocations.length})`}
-        </button>
+          {/* Mobile list toggle */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="absolute bottom-4 right-4 z-[40] glass px-4 py-2.5 rounded-xl text-sm font-medium text-gold-300 hover:text-gold-200 transition-colors md:hidden"
+          >
+            {sidebarOpen ? 'Back to Map' : `List (${filteredLocations.length})`}
+          </button>
 
-        {/* Desktop sidebar — wheel events isolated from map */}
+          {/* Mobile list overlay */}
+          {sidebarOpen && (
+            <div
+              className="absolute inset-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar"
+              style={{ overscrollBehavior: 'contain' }}
+              onWheel={(e) => e.stopPropagation()}
+            >
+              <div className="p-4 space-y-2">
+                <button
+                  onClick={() => setSidebarOpen(false)}
+                  className="w-full text-center py-2.5 text-sm font-medium text-gold-300 border border-gold-300/20 rounded-xl mb-3"
+                >
+                  ← Back to Map
+                </button>
+                {filteredLocations.slice(0, 100).map((loc) => (
+                  <LocationCard key={loc.id} location={loc} compact />
+                ))}
+                {filteredLocations.length > 100 && (
+                  <p className="text-xs text-charcoal-500 text-center py-4">
+                    Showing first 100. Search to narrow results.
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Desktop sidebar — separate from map, no z-index conflict */}
         <div
-          className="absolute top-4 right-4 bottom-4 w-80 z-[30] glass rounded-xl overflow-hidden hidden md:flex flex-col"
+          className="hidden md:flex flex-col w-80 flex-shrink-0 bg-charcoal-900 border-l border-gold-300/10"
           onWheel={(e) => e.stopPropagation()}
         >
           <div className="px-4 py-3 border-b border-gold-300/10 flex items-center justify-between flex-shrink-0">
@@ -214,32 +243,6 @@ export default function HomePage() {
             )}
           </div>
         </div>
-
-        {/* Mobile list overlay */}
-        {sidebarOpen && (
-          <div
-            className="absolute inset-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar"
-            style={{ overscrollBehavior: 'contain' }}
-            onWheel={(e) => e.stopPropagation()}
-          >
-            <div className="p-4 space-y-2">
-              <button
-                onClick={() => setSidebarOpen(false)}
-                className="w-full text-center py-2.5 text-sm font-medium text-gold-300 border border-gold-300/20 rounded-xl mb-3"
-              >
-                ← Back to Map
-              </button>
-              {filteredLocations.slice(0, 100).map((loc) => (
-                <LocationCard key={loc.id} location={loc} compact />
-              ))}
-              {filteredLocations.length > 100 && (
-                <p className="text-xs text-charcoal-500 text-center py-4">
-                  Showing first 100. Search to narrow results.
-                </p>
-              )}
-            </div>
-          </div>
-        )}
       </section>
 
       {/* States Section */}
