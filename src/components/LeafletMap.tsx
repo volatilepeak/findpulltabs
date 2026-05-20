@@ -34,6 +34,17 @@ export function LeafletMap({
   const markersRef = useRef<any>(null);
   const [loaded, setLoaded] = useState(false);
 
+  // Block wheel events from leaking out of the map container
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+    function stopWheel(e: WheelEvent) {
+      e.stopPropagation();
+    }
+    el.addEventListener('wheel', stopWheel, { passive: false });
+    return () => el.removeEventListener('wheel', stopWheel);
+  }, []);
+
   // Load Leaflet scripts
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -67,6 +78,7 @@ export function LeafletMap({
       zoom,
       zoomControl: true,
       attributionControl: true,
+      scrollWheelZoom: true,
     });
 
     // Dark map tiles (CartoDB Dark Matter)
@@ -102,13 +114,17 @@ export function LeafletMap({
       map.removeLayer(markersRef.current);
     }
 
-    // Create marker cluster group
+    // Create marker cluster group with performance tuning
     const markers = L.markerClusterGroup({
-      maxClusterRadius: 50,
+      maxClusterRadius: 60,
       spiderfyOnMaxZoom: true,
       showCoverageOnHover: false,
       zoomToBoundsOnClick: true,
       disableClusteringAtZoom: 15,
+      chunkedLoading: true,
+      chunkInterval: 100,
+      chunkDelay: 10,
+      animate: false,
       iconCreateFunction: (cluster: any) => {
         const count = cluster.getChildCount();
         let size = 'small';
@@ -145,6 +161,8 @@ export function LeafletMap({
       popupAnchor: [0, -40],
     });
 
+    // Batch add markers for performance
+    const markerArray: any[] = [];
     locations.forEach((loc) => {
       if (!loc.lat || !loc.lng) return;
 
@@ -157,14 +175,14 @@ export function LeafletMap({
       const venueUrl = `/states/${stateSlug}/${citySlug}/${venueSlug}`;
 
       marker.bindPopup(`
-        <div style="min-width: 200px;">
+        <div style="min-width: 220px;">
           <div style="font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; margin-bottom: 6px; color: #D4C5A3;">
             ${getTypeIcon(loc.type)} ${loc.name}
           </div>
-          <div style="font-size: 12px; color: #B0B0B0; margin-bottom: 4px;">
+          <div style="font-size: 12px; color: #CCCCCC; margin-bottom: 4px;">
             ${getTypeLabel(loc.type)}
           </div>
-          <div style="font-size: 13px; color: #E5E5E5; margin-bottom: 10px;">
+          <div style="font-size: 13px; color: #F0F0F0; margin-bottom: 10px;">
             ${formatAddress(loc)}
           </div>
           <div style="display: flex; gap: 8px;">
@@ -178,9 +196,10 @@ export function LeafletMap({
         </div>
       `);
 
-      markers.addLayer(marker);
+      markerArray.push(marker);
     });
 
+    markers.addLayers(markerArray);
     map.addLayer(markers);
     markersRef.current = markers;
   }, [loaded, locations, selectedId]);

@@ -178,8 +178,11 @@ export default function HomePage() {
           {sidebarOpen ? 'Back to Map' : `List (${filteredLocations.length})`}
         </button>
 
-        {/* Desktop sidebar — NO scroll event listeners, pure CSS overflow */}
-        <div className="absolute top-4 right-4 bottom-4 w-80 z-[30] glass rounded-xl overflow-hidden hidden md:flex flex-col">
+        {/* Desktop sidebar — wheel events isolated from map */}
+        <div
+          className="absolute top-4 right-4 bottom-4 w-80 z-[30] glass rounded-xl overflow-hidden hidden md:flex flex-col"
+          onWheel={(e) => e.stopPropagation()}
+        >
           <div className="px-4 py-3 border-b border-gold-300/10 flex items-center justify-between flex-shrink-0">
             <h2 className="font-display text-sm font-semibold text-gold-300">
               Locations
@@ -207,7 +210,11 @@ export default function HomePage() {
 
         {/* Mobile list overlay */}
         {sidebarOpen && (
-          <div className="absolute inset-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar" style={{ overscrollBehavior: 'contain' }}>
+          <div
+            className="absolute inset-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar"
+            style={{ overscrollBehavior: 'contain' }}
+            onWheel={(e) => e.stopPropagation()}
+          >
             <div className="p-4 space-y-2">
               <button
                 onClick={() => setSidebarOpen(false)}
