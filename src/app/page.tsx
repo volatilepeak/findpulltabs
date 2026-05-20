@@ -18,12 +18,10 @@ export default function HomePage() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [stateFilter, setStateFilter] = useState('all');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [mapBounds, setMapBounds] = useState<any>(null);
   const [searchResults, setSearchResults] = useState<Location[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const stateCounts = getStateCounts();
 
-  // Map center based on state selection
   const mapCenter: [number, number] = useMemo(() => {
     if (stateFilter !== 'all' && STATES[stateFilter]) {
       return STATES[stateFilter].center;
@@ -52,20 +50,6 @@ export default function HomePage() {
     return counts;
   }, [query, stateFilter]);
 
-  const visibleLocations = useMemo(() => {
-    if (!mapBounds) return filteredLocations.slice(0, 50);
-    return filteredLocations
-      .filter((l) => {
-        try { return mapBounds.contains([l.lat, l.lng]); } catch { return false; }
-      })
-      .slice(0, 50);
-  }, [filteredLocations, mapBounds]);
-
-  const handleBoundsChange = useCallback((bounds: any) => {
-    setMapBounds(bounds);
-  }, []);
-
-  // Autocomplete search
   function handleQueryChange(value: string) {
     setQuery(value);
     if (value.length >= 2) {
@@ -80,21 +64,20 @@ export default function HomePage() {
 
   return (
     <div className="relative">
-      {/* Search + State Selector Bar — ABOVE the map */}
-      <section className="bg-charcoal-950 border-b border-gold-300/10 px-4 sm:px-6 py-4">
+      {/* Search + State Selector — ABOVE the map */}
+      <section className="bg-charcoal-950 border-b border-gold-300/10 px-4 sm:px-6 py-5 pb-6">
         <div className="max-w-5xl mx-auto">
-          {/* Top row: tagline */}
-          <h1 className="font-display text-xl sm:text-2xl font-bold text-cream-200 mb-3 text-center">
+          <h1 className="font-display text-xl sm:text-2xl font-bold text-cream-200 mb-4 text-center">
             Find Pulltabs Near You
           </h1>
 
-          {/* Search row */}
-          <div className="flex gap-2 mb-3 relative">
+          {/* Search row — stacks on mobile */}
+          <div className="flex flex-col sm:flex-row gap-2 mb-4 relative">
             {/* State selector */}
             <select
               value={stateFilter}
               onChange={(e) => { setStateFilter(e.target.value); setQuery(''); setShowDropdown(false); }}
-              className="w-28 sm:w-36 px-3 py-3 rounded-xl bg-charcoal-800 border border-charcoal-700 text-cream-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gold-300/50 focus:border-gold-300/50 appearance-none cursor-pointer"
+              className="w-full sm:w-36 px-3 py-3 rounded-xl bg-charcoal-800 border border-charcoal-700 text-cream-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-gold-300/50 focus:border-gold-300/50 appearance-none cursor-pointer"
               style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23A0A0A0' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center' }}
             >
               <option value="all">All States</option>
@@ -119,7 +102,7 @@ export default function HomePage() {
                   onChange={(e) => handleQueryChange(e.target.value)}
                   onFocus={() => { if (searchResults.length > 0) setShowDropdown(true); }}
                   placeholder="Search city, ZIP, or venue…"
-                  className="flex-1 bg-transparent px-3 py-3 text-sm text-cream-200 placeholder-charcoal-500 focus:outline-none"
+                  className="flex-1 bg-transparent px-3 py-3 text-sm text-cream-200 placeholder-charcoal-500 focus:outline-none min-w-0"
                 />
                 {query && (
                   <button
@@ -134,7 +117,7 @@ export default function HomePage() {
                 )}
                 <button
                   onClick={() => setShowDropdown(false)}
-                  className="px-4 py-3 bg-gold-300 hover:bg-gold-400 text-charcoal-900 text-sm font-semibold transition-colors"
+                  className="px-4 py-3 bg-gold-300 hover:bg-gold-400 text-charcoal-900 text-sm font-semibold transition-colors flex-shrink-0"
                 >
                   Search
                 </button>
@@ -167,71 +150,79 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Filter pills */}
-          <FilterPills
-            activeFilter={typeFilter}
-            onChange={setTypeFilter}
-            counts={typeCounts}
-          />
+          {/* Filter pills with horizontal scroll on mobile */}
+          <div className="-mx-4 px-4 sm:mx-0 sm:px-0">
+            <FilterPills
+              activeFilter={typeFilter}
+              onChange={setTypeFilter}
+              counts={typeCounts}
+            />
+          </div>
         </div>
       </section>
 
-      {/* Map Section — no overlays, clean */}
-      <section className="relative h-[70vh] min-h-[400px]">
+      {/* Map Section — clean, no overlays except desktop sidebar */}
+      <section className="relative h-[65vh] sm:h-[70vh] min-h-[350px]">
         <LeafletMap
           locations={filteredLocations}
           center={mapCenter}
           zoom={mapZoom}
           height="100%"
-          onBoundsChange={handleBoundsChange}
         />
 
-        {/* Sidebar toggle (mobile) */}
+        {/* Mobile list toggle */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="absolute bottom-4 right-4 z-[40] glass px-4 py-2.5 rounded-xl text-sm font-medium text-gold-300 hover:text-gold-200 transition-colors md:hidden"
         >
-          {sidebarOpen ? 'Hide List' : `List (${filteredLocations.length})`}
+          {sidebarOpen ? 'Back to Map' : `List (${filteredLocations.length})`}
         </button>
 
-        {/* Floating sidebar — desktop only */}
+        {/* Desktop sidebar — NO scroll event listeners, pure CSS overflow */}
         <div className="absolute top-4 right-4 bottom-4 w-80 z-[30] glass rounded-xl overflow-hidden hidden md:flex flex-col">
-          <div className="px-4 py-3 border-b border-gold-300/10 flex items-center justify-between">
+          <div className="px-4 py-3 border-b border-gold-300/10 flex items-center justify-between flex-shrink-0">
             <h2 className="font-display text-sm font-semibold text-gold-300">
-              Nearby
+              Locations
               <span className="text-charcoal-400 font-body font-normal ml-1.5">
-                {visibleLocations.length} shown
+                {filteredLocations.length.toLocaleString()}
               </span>
             </h2>
-            <span className="text-xs text-charcoal-500">
-              {filteredLocations.length.toLocaleString()} total
-            </span>
           </div>
-          <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1">
-            {visibleLocations.map((loc) => (
+          <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1" style={{ overscrollBehavior: 'contain' }}>
+            {filteredLocations.slice(0, 100).map((loc) => (
               <LocationCard key={loc.id} location={loc} compact />
             ))}
-            {visibleLocations.length === 0 && (
+            {filteredLocations.length === 0 && (
               <p className="text-sm text-charcoal-500 text-center py-8">
-                No locations in this area. Try zooming out.
+                No locations found.
+              </p>
+            )}
+            {filteredLocations.length > 100 && (
+              <p className="text-xs text-charcoal-500 text-center py-4">
+                Showing first 100. Zoom in or search to narrow results.
               </p>
             )}
           </div>
         </div>
 
-        {/* Mobile sidebar */}
+        {/* Mobile list overlay */}
         {sidebarOpen && (
-          <div className="absolute inset-x-0 bottom-0 top-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar">
+          <div className="absolute inset-0 z-[35] glass md:hidden overflow-y-auto custom-scrollbar" style={{ overscrollBehavior: 'contain' }}>
             <div className="p-4 space-y-2">
               <button
                 onClick={() => setSidebarOpen(false)}
-                className="w-full text-center py-2 text-sm text-gold-300 border-b border-charcoal-800 mb-2"
+                className="w-full text-center py-2.5 text-sm font-medium text-gold-300 border border-gold-300/20 rounded-xl mb-3"
               >
                 ← Back to Map
               </button>
-              {visibleLocations.map((loc) => (
+              {filteredLocations.slice(0, 100).map((loc) => (
                 <LocationCard key={loc.id} location={loc} compact />
               ))}
+              {filteredLocations.length > 100 && (
+                <p className="text-xs text-charcoal-500 text-center py-4">
+                  Showing first 100. Search to narrow results.
+                </p>
+              )}
             </div>
           </div>
         )}
@@ -272,7 +263,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About / CTA Section */}
+      {/* CTA Section */}
       <section className="bg-charcoal-900 py-20 border-t border-gold-300/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-cream-200 mb-4">
