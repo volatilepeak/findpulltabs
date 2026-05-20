@@ -71,8 +71,8 @@ export default function HomePage() {
             Find Pulltabs Near You
           </h1>
 
-          {/* Search row — stacks on mobile */}
-          <div className="flex flex-col sm:flex-row gap-2 mb-4 relative">
+          {/* Search row — stacks on mobile, z-index above filters */}
+          <div className="flex flex-col sm:flex-row gap-2 mb-4 relative z-20">
             {/* State selector */}
             <select
               value={stateFilter}
@@ -151,7 +151,7 @@ export default function HomePage() {
           </div>
 
           {/* Filter pills with horizontal scroll on mobile */}
-          <div className="-mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="-mx-4 px-4 sm:mx-0 sm:px-0 relative z-10">
             <FilterPills
               activeFilter={typeFilter}
               onChange={setTypeFilter}
@@ -191,7 +191,14 @@ export default function HomePage() {
               </span>
             </h2>
           </div>
-          <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1" style={{ overscrollBehavior: 'contain' }}>
+          <div
+            className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1"
+            style={{ overscrollBehavior: 'contain' }}
+            onWheel={(e) => {
+              e.stopPropagation();
+              e.nativeEvent.stopImmediatePropagation();
+            }}
+          >
             {filteredLocations.slice(0, 100).map((loc) => (
               <LocationCard key={loc.id} location={loc} compact />
             ))}
