@@ -65,7 +65,7 @@ export default function HomePage() {
   return (
     <div className="relative">
       {/* Search + State Selector — ABOVE the map */}
-      <section className="bg-charcoal-950 border-b border-gold-300/10 px-4 sm:px-6 py-5 pb-6">
+      <section className="bg-charcoal-950 border-b border-gold-300/10 px-4 sm:px-6 py-5 pb-6 relative z-[50]">
         <div className="max-w-5xl mx-auto">
           <h1 className="font-display text-xl sm:text-2xl font-bold text-cream-200 mb-4 text-center">
             Find Pulltabs Near You
@@ -162,7 +162,7 @@ export default function HomePage() {
       </section>
 
       {/* Map + Sidebar Section */}
-      <section className="relative h-[65vh] sm:h-[70vh] min-h-[350px] flex">
+      <section className="relative h-[65vh] sm:h-[70vh] min-h-[350px] flex z-[1]">
         {/* Map takes remaining space */}
         <div className="flex-1 relative">
           <LeafletMap
