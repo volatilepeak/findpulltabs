@@ -26,9 +26,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (locs.length === 0) return {};
   const cityName = locs[0].city;
   const abbr = stateInfo.abbr;
+  const etabCount = locs.filter((l) => l.hasBingo).length;
   return {
     title: `Pull Tabs in ${cityName}, ${abbr} — ${locs.length} Pull Tab & E-Tab Locations`,
-    description: `${cityName}, ${stateInfo.name} has ${locs.length} pull tab locations. Find pull tabs, e-tabs, and bingo near you. Browse bars, VFW posts, American Legion halls, and more with hours, prices, and directions.`,
+    description: `${cityName}, ${stateInfo.name} has ${locs.length} pull tab locations${etabCount > 0 ? ` including ${etabCount} with e-tabs` : ''}. Find pull tabs, e-tabs, and bingo near you. Browse bars, VFW posts, American Legion halls, and more with directions.`,
     keywords: [
       `pull tabs ${cityName} ${abbr}`,
       `pull tabs near me ${cityName}`,
@@ -52,10 +53,19 @@ export default function CityPage({ params }: PageProps) {
   if (cityLocations.length === 0) notFound();
 
   const cityName = cityLocations[0].city;
+  const etabCount = cityLocations.filter((l) => l.hasBingo).length;
 
   // Compute center from locations
   const avgLat = cityLocations.reduce((s, l) => s + l.lat, 0) / cityLocations.length;
   const avgLng = cityLocations.reduce((s, l) => s + l.lng, 0) / cityLocations.length;
+
+  // Get nearby cities (same state, sorted by count, exclude current)
+  const allCities = getCitiesForState(stateInfo.abbr);
+  const currentIdx = allCities.findIndex((c) => c.slug === params.city);
+  const nearbyCities = allCities
+    .filter((c) => c.slug !== params.city)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8);
 
   return (
     <div>
@@ -82,6 +92,7 @@ export default function CityPage({ params }: PageProps) {
           </h1>
           <p className="text-charcoal-400">
             {cityLocations.length} location{cityLocations.length !== 1 ? 's' : ''} with pull tabs
+            {etabCount > 0 && ` · ${etabCount} with e-tabs`}
           </p>
         </div>
       </div>
@@ -140,8 +151,41 @@ export default function CityPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* SEO content */}
-      <section className="bg-charcoal-900 py-12 border-t border-charcoal-800">
+      {/* Nearby Cities */}
+      {nearbyCities.length > 0 && (
+        <section className="bg-charcoal-900 py-12 border-t border-charcoal-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 className="font-display text-xl font-bold text-cream-200 mb-4">
+              More Pull Tab Cities in {stateInfo.name}
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {nearbyCities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/states/${params.state}/${city.slug}`}
+                  className="flex items-center justify-between px-4 py-3 rounded-lg bg-charcoal-800/50 border border-charcoal-700 hover:border-gold-300/30 transition-all group"
+                >
+                  <span className="text-sm text-cream-300 group-hover:text-gold-300 transition-colors truncate">
+                    {city.name}
+                  </span>
+                  <span className="text-xs text-charcoal-500 ml-2 flex-shrink-0">{city.count}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link
+                href={`/states/${params.state}`}
+                className="text-sm text-gold-400 hover:text-gold-300 transition-colors"
+              >
+                View all cities in {stateInfo.name} →
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* SEO content with internal links */}
+      <section className="bg-charcoal-950 py-12 border-t border-charcoal-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-xl font-bold text-cream-200 mb-3">
             Pull Tabs, E-Tabs &amp; Bingo in {cityName}, {stateInfo.abbr}
@@ -149,16 +193,41 @@ export default function CityPage({ params }: PageProps) {
           <div className="text-charcoal-300 text-sm leading-relaxed space-y-3">
             <p>
               {cityName}, {stateInfo.name} has {cityLocations.length} pull tab
-              {cityLocations.length !== 1 ? ' locations' : ' location'} listed on FindPullTabs.
-              Find pull tabs, electronic pull tabs (e-tabs), bingo, and other charitable gambling
+              {cityLocations.length !== 1 ? ' locations' : ' location'} listed on FindPullTabs
+              {etabCount > 0 && `, including ${etabCount} venue${etabCount !== 1 ? 's' : ''} with electronic pull tabs (e-tabs)`}.
+              Find pull tabs, e-tabs, bingo, and other charitable gambling
               games at bars, VFW posts, American Legion halls, Eagles clubs, and other venues in {cityName}.
             </p>
             <p>
-              Pull tabs are a form of charitable gaming regulated by the {stateInfo.name} Gambling Control Board.
-              When you play pull tabs in {cityName}, proceeds support local nonprofits, veterans&apos;
-              organizations, youth sports, and community programs. Browse the {cityLocations.length}{' '}
-              {cityLocations.length !== 1 ? 'locations' : 'location'} above to find pull tabs near you
-              in {cityName}, get directions, and save your favorites.
+              Pull tabs are a form of charitable gaming regulated by the{' '}
+              <Link href={`/states/${params.state}`} className="text-gold-300 hover:text-gold-200 underline">
+                {stateInfo.name}
+              </Link>{' '}
+              Gambling Control Board. When you play pull tabs in {cityName}, proceeds support local nonprofits,
+              veterans&apos; organizations, youth sports, and community programs.
+            </p>
+            <p>
+              New to pull tabs? Learn{' '}
+              <Link href="/blog/what-are-pull-tabs" className="text-gold-300 hover:text-gold-200 underline">
+                what pull tabs are
+              </Link>
+              {' '}or read{' '}
+              <Link href="/blog/best-pull-tab-strategies" className="text-gold-300 hover:text-gold-200 underline">
+                tips from experienced players
+              </Link>
+              . Interested in electronic gaming? Check out our guide to{' '}
+              <Link href="/blog/electronic-pull-tabs-explained" className="text-gold-300 hover:text-gold-200 underline">
+                e-tabs and how they work
+              </Link>
+              .
+            </p>
+            <p>
+              Know of a pull tab location in {cityName} that&apos;s not listed?{' '}
+              <Link href="/submit" className="text-gold-300 hover:text-gold-200 underline">
+                Submit it here
+              </Link>
+              {' '}and we&apos;ll add it after verification. You can also submit gambling hours for any venue
+              to help other players find the best times to play.
             </p>
           </div>
         </div>
