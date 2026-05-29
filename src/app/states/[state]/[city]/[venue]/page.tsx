@@ -2,15 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  STATES,
-  getLocationsForCity,
-  getCitiesForState,
-  slugify,
-  venueSlug as getVenueSlug,
-  getTypeIcon,
-  getTypeLabel,
-  formatAddress,
-  getDirectionsUrl,
+  STATES, getLocationsForCity, getCitiesForState, slugify,
+  venueSlug as getVenueSlug, getTypeIcon, getTypeLabel, formatAddress, getDirectionsUrl,
 } from '@/lib/data';
 import { getVenueHours, DAY_LABELS } from '@/lib/hours';
 import { VenueClient } from './VenueClient';
@@ -47,6 +40,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr} | FindPullTabs`,
     description: `Find ${games || 'pull tabs'} at ${loc.name} in ${loc.city}, ${stateInfo.name}. ${loc.address}. Get directions, gambling hours, and save to favorites. ${getTypeLabel(loc.type)} offering charitable gaming.`,
+    alternates: { canonical: `https://findpulltabs.com/states/${params.state}/${params.city}/${params.venue}` },
     keywords: [`${loc.name} pull tabs`, `pull tabs ${loc.city} ${abbr}`, `e-tabs ${loc.city}`, `${getTypeLabel(loc.type)} pull tabs`, `charitable gambling ${loc.city}`, `pull tab hours ${loc.city}`],
     openGraph: {
       title: `${loc.name} — Pull Tabs in ${loc.city}, ${abbr}`,
@@ -229,9 +223,7 @@ export default function VenuePage({ params }: PageProps) {
                     </Link>
                   ))}
                 </div>
-                <Link href={`/states/${params.state}/${params.city}`} className="block text-xs text-gold-400 hover:text-gold-300 mt-3 transition-colors">
-                  View all in {location.city} →
-                </Link>
+                <Link href={`/states/${params.state}/${params.city}`} className="block text-xs text-gold-400 hover:text-gold-300 mt-3 transition-colors">View all in {location.city} →</Link>
               </div>
             )}
             <Link href={`/states/${params.state}`} className="block glass rounded-xl p-5 group">

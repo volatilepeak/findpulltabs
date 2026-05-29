@@ -20,6 +20,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `Pull Tabs in ${stateInfo.name} — ${count} Pull Tab, E-Tab & Bingo Locations`,
     description: `${stateInfo.name} has ${count} pull tab locations. Find pull tabs, e-tabs, bingo, and charitable gambling near you in ${abbr}. Browse bars, VFW posts, American Legion halls, Eagles clubs, and more by city with directions.`,
+    alternates: { canonical: `https://findpulltabs.com/states/${params.state}` },
     keywords: [
       `pull tabs ${stateInfo.name}`,
       `pull tabs near me ${abbr}`,
@@ -51,16 +52,11 @@ export default function StatePage({ params }: PageProps) {
   });
 
   const etabCount = stateLocations.filter((l) => l.hasBingo).length;
-
-  // Top cities by location count
   const topCities = [...cities].sort((a, b) => b.count - a.count).slice(0, 12);
-
-  // Other states for cross-linking
   const otherStates = Object.entries(STATES).filter(([key]) => key !== params.state);
 
   return (
     <div>
-      {/* Hero map */}
       <StateMapClient
         locations={stateLocations}
         center={stateInfo.center}
@@ -70,7 +66,6 @@ export default function StatePage({ params }: PageProps) {
         stateKey={params.state}
       />
 
-      {/* Popular Cities */}
       {topCities.length > 0 && (
         <section className="bg-charcoal-900 py-12 border-b border-charcoal-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -99,7 +94,6 @@ export default function StatePage({ params }: PageProps) {
         </section>
       )}
 
-      {/* All Cities directory */}
       <section className="bg-charcoal-950 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-cream-200 mb-2">
@@ -108,7 +102,6 @@ export default function StatePage({ params }: PageProps) {
           <p className="text-charcoal-400 mb-8">
             {cities.length} cities with pull tab, e-tab, and bingo locations
           </p>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
             {cities.map((city) => (
               <Link
@@ -119,16 +112,13 @@ export default function StatePage({ params }: PageProps) {
                 <span className="text-sm text-cream-300 group-hover:text-gold-300 transition-colors truncate">
                   {city.name}
                 </span>
-                <span className="text-xs text-charcoal-500 ml-2 flex-shrink-0">
-                  {city.count}
-                </span>
+                <span className="text-xs text-charcoal-500 ml-2 flex-shrink-0">{city.count}</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cross-state links */}
       <section className="bg-charcoal-900 py-12 border-t border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-xl font-bold text-cream-200 mb-4">
@@ -142,12 +132,8 @@ export default function StatePage({ params }: PageProps) {
                 className="flex items-center justify-between px-5 py-4 rounded-xl bg-charcoal-800/50 border border-charcoal-700 hover:border-gold-300/30 transition-all group"
               >
                 <div>
-                  <p className="text-sm font-medium text-cream-200 group-hover:text-gold-300 transition-colors">
-                    {state.name}
-                  </p>
-                  <p className="text-xs text-charcoal-400">
-                    {stateCounts[key] || 0} pull tab locations
-                  </p>
+                  <p className="text-sm font-medium text-cream-200 group-hover:text-gold-300 transition-colors">{state.name}</p>
+                  <p className="text-xs text-charcoal-400">{stateCounts[key] || 0} pull tab locations</p>
                 </div>
                 <svg className="w-4 h-4 text-charcoal-500 group-hover:text-gold-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -158,7 +144,6 @@ export default function StatePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* SEO content with blog links */}
       <section className="bg-charcoal-950 py-16 border-t border-charcoal-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-cream-200 mb-4">
