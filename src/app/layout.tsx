@@ -61,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<meta name="google-adsense-account" content="ca-pub-1079322354247858" />
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
