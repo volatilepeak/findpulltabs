@@ -5,10 +5,9 @@ import {
   STATES, getLocationsForCity, getCitiesForState, slugify,
   venueSlug as getVenueSlug, getTypeIcon, getTypeLabel, formatAddress, getDirectionsUrl,
 } from '@/lib/data';
-import { getVenueHours, DAY_LABELS } from '@/lib/hours';
 import { VenueClient } from './VenueClient';
 import { VenueMapClient } from './VenueMapClient';
-import { SubmitHoursForm } from './SubmitHoursForm';
+import { VenueHoursClaimed } from './VenueHoursClaimed';
 
 interface PageProps {
   params: { state: string; city: string; venue: string };
@@ -56,7 +55,6 @@ export default function VenuePage({ params }: PageProps) {
   const location = locs.find((l) => getVenueSlug(l) === params.venue);
   if (!location) notFound();
   const nearby = locs.filter((l) => l.id !== location.id).slice(0, 6);
-  const hours = getVenueHours(params.state, params.city, params.venue);
 
   const blogLinks: { href: string; label: string }[] = [];
   if (location.type === 'vfw') blogLinks.push({ href: '/blog/vfw-pull-tabs-tradition', label: 'VFW Posts & Pull Tabs: A Tradition' });
@@ -132,44 +130,15 @@ export default function VenuePage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="glass rounded-xl p-6 mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <svg className="w-5 h-5 text-gold-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <h2 className="font-display text-lg font-semibold text-cream-200">Gambling Hours</h2>
-              </div>
-              {hours ? (
-                <div>
-                  {hours.sellerType && (
-                    <div className="mb-3">
-                      <span className="text-xs font-medium text-charcoal-300 bg-charcoal-800 px-2 py-1 rounded">
-                        Seller Type: {hours.sellerType === 'booth' ? '🎪 Booth' : hours.sellerType === 'bar' ? '🍺 Bar' : 'Unknown'}
-                      </span>
-                    </div>
-                  )}
-                  <div className="space-y-1.5">
-                    {DAY_LABELS.map(({ key, label }) => {
-                      const value = hours[key as keyof typeof hours];
-                      return value ? (
-                        <div key={key} className="flex items-center justify-between text-sm">
-                          <span className="text-charcoal-300 w-24">{label}</span>
-                          <span className="text-cream-200 font-medium">{value as string}</span>
-                        </div>
-                      ) : null;
-                    })}
-                  </div>
-                  {hours.notes && <p className="text-xs text-charcoal-400 mt-3 italic">{hours.notes}</p>}
-                  {hours.lastUpdated && <p className="text-xs text-charcoal-500 mt-2">Last updated: {hours.lastUpdated}</p>}
-                  <div className="mt-4 pt-4 border-t border-charcoal-800">
-                    <p className="text-xs text-charcoal-500 mb-2">Hours incorrect?</p>
-                    <SubmitHoursForm venueName={location.name} venueAddress={location.address} isUpdate />
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center py-4">
-                  <p className="text-sm text-charcoal-400 mb-3">Gambling hours not yet listed for this venue.</p>
-                  <SubmitHoursForm venueName={location.name} venueAddress={location.address} />
-                </div>
-              )}
+            {/* Hours + Claimed Badge — powered by Supabase */}
+            <div className="mb-6">
+              <VenueHoursClaimed
+                stateKey={params.state}
+                citySlug={params.city}
+                venueSlug={params.venue}
+                venueName={location.name}
+                venueAddress={location.address}
+              />
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -238,7 +207,6 @@ export default function VenuePage({ params }: PageProps) {
         '@context': 'https://schema.org', '@type': 'LocalBusiness', name: location.name,
         address: { '@type': 'PostalAddress', streetAddress: location.address, addressLocality: location.city, addressRegion: location.state, postalCode: location.zip || undefined },
         geo: { '@type': 'GeoCoordinates', latitude: location.lat, longitude: location.lng },
-        ...(hours ? { openingHoursSpecification: DAY_LABELS.filter(({ key }) => hours[key as keyof typeof hours]).map(({ key, label }) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: label, opens: (hours[key as keyof typeof hours] as string)?.split(' - ')[0] || '', closes: (hours[key as keyof typeof hours] as string)?.split(' - ')[1] || '' })) } : {}),
       }) }} />
     </div>
   );
