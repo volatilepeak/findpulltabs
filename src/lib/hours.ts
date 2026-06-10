@@ -17,7 +17,6 @@ export interface VenueHours {
 
 // Key format: "state/city-slug/venue-slug"
 export const HOURS_DATA: Record<string, VenueHours> = {
-  // ---- Minnesota ----
   'mn/maple-grove/chanticlear-pizza': {
     mon: '11:00 AM - 11:00 PM',
     tue: '11:00 AM - 11:00 PM',
@@ -30,19 +29,18 @@ export const HOURS_DATA: Record<string, VenueHours> = {
     lastUpdated: '2026-05-14',
   },
 
-  // Add more venues here as hours are submitted
-  // Example:
-  // 'mn/minnetonka/dukes-on-7': {
-  //   mon: '3:00 PM - Last Call',
-  //   tue: '3:00 PM - Last Call',
-  //   wed: '3:00 PM - Last Call',
-  //   thu: '3:00 PM - Last Call',
-  //   fri: '2:00 PM - Last Call',
-  //   sat: '2:00 PM - Last Call',
-  //   sun: '11:00 AM - 6:00 PM',
-  //   sellerType: 'booth',
-  //   lastUpdated: '2026-05-14',
-  // },
+  'mn/shakopee/eagles-aerie-4120': {
+    mon: '10:00 AM - 12:30 AM',
+    tue: '10:00 AM - 12:30 AM',
+    wed: '10:00 AM - 12:30 AM',
+    thu: '10:00 AM - 12:30 AM',
+    fri: '10:00 AM - 12:30 AM',
+    sat: '9:00 AM - 12:30 AM',
+    sun: '9:00 AM - 10:30 PM',
+    notes: '$1, $2, and $5 boxes available',
+    sellerType: 'bar',
+    lastUpdated: '2026-06-08',
+  },
 };
 
 export function getVenueHours(stateKey: string, citySlug: string, venueSlug: string): VenueHours | null {
