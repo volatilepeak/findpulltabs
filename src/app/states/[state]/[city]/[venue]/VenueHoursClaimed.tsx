@@ -39,12 +39,13 @@ interface Props {
 export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, venueAddress }: Props) {
   const [hours, setHours] = useState<HoursData | null>(null);
   const [claimed, setClaimed] = useState(false);
+  const [claimedPhotos, setClaimedPhotos] = useState<string[]>([]);
   const [details, setDetails] = useState<VenueDetailsData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [activePhoto, setActivePhoto] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch hours
       const { data: hoursData } = await supabase
         .from('venue_hours')
         .select('*')
@@ -54,7 +55,6 @@ export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, ve
         .single();
       if (hoursData) setHours(hoursData);
 
-      // Fetch claimed status
       const { data: claimData } = await supabase
         .from('claimed_venues')
         .select('*')
@@ -62,9 +62,13 @@ export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, ve
         .eq('city_slug', citySlug)
         .eq('venue_slug', venueSlug)
         .single();
-      if (claimData) setClaimed(true);
+      if (claimData) {
+        setClaimed(true);
+        if (claimData.photos && claimData.photos.length > 0) {
+          setClaimedPhotos(claimData.photos);
+        }
+      }
 
-      // Fetch Google details (rating, reviews, photo)
       const { data: detailsData } = await supabase
         .from('venue_details')
         .select('rating, review_count, photo_url')
@@ -79,28 +83,93 @@ export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, ve
     fetchData();
   }, [stateKey, citySlug, venueSlug]);
 
+  // Claimed photos take priority, fall back to Google photo
+  const photos = claimedPhotos.length > 0
+    ? claimedPhotos
+    : details?.photo_url
+      ? [details.photo_url]
+      : [];
+
+  const hasMultiplePhotos = photos.length > 1;
+
   const submitSubject = hours ? `Update Hours: ${venueName}` : `Submit Hours: ${venueName}`;
   const submitBody = `Venue: ${venueName}\nAddress: ${venueAddress}\n\nPull Tab / Gambling Hours:\nMonday: \nTuesday: \nWednesday: \nThursday: \nFriday: \nSaturday: \nSunday: \n\nSeller Type (Booth or Bar): \n\nAny notes: \n`;
   const mailtoUrl = `mailto:badtabits@gmail.com?subject=${encodeURIComponent(submitSubject)}&body=${encodeURIComponent(submitBody)}`;
 
   return (
     <div className="space-y-6">
-      {/* Photo */}
-      {details?.photo_url && (
-        <div className="rounded-xl overflow-hidden h-48 sm:h-64">
-          <img
-            src={details.photo_url}
-            alt={`${venueName} photo`}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+      {/* Photo / Carousel */}
+      {photos.length > 0 && (
+        <div className="relative rounded-xl overflow-hidden">
+          <div className="h-48 sm:h-72">
+            <img
+              src={photos[activePhoto]}
+              alt={`${venueName} - photo ${activePhoto + 1}`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Carousel controls */}
+          {hasMultiplePhotos && (
+            <>
+              <button
+                onClick={() => setActivePhoto((prev) => (prev === 0 ? photos.length - 1 : prev - 1))}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
+                aria-label="Previous photo"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setActivePhoto((prev) => (prev === photos.length - 1 ? 0 : prev + 1))}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
+                aria-label="Next photo"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Dots */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {photos.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActivePhoto(idx)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      idx === activePhoto ? 'bg-gold-300 w-4' : 'bg-white/50'
+                    }`}
+                    aria-label={`Photo ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+
+          {/* Photo count badge */}
+          {hasMultiplePhotos && (
+            <div className="absolute top-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-lg">
+              {activePhoto + 1} / {photos.length}
+            </div>
+          )}
+
+          {/* Claimed photo badge */}
+          {claimedPhotos.length > 0 && (
+            <div className="absolute top-3 left-3 bg-gold-300/90 text-charcoal-900 text-xs font-semibold px-2 py-1 rounded-lg flex items-center gap-1">
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Owner Photos
+            </div>
+          )}
         </div>
       )}
 
       {/* Rating + Claimed badges row */}
       {(details?.rating || claimed) && (
         <div className="flex flex-wrap gap-3">
-          {/* Rating badge */}
           {details?.rating && (
             <div className="glass rounded-xl px-4 py-3 flex items-center gap-2">
               <div className="flex items-center gap-1">
@@ -115,7 +184,6 @@ export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, ve
             </div>
           )}
 
-          {/* Claimed badge */}
           {claimed && (
             <div className="glass rounded-xl px-4 py-3 border border-gold-400/30 bg-gradient-to-r from-gold-300/5 to-transparent flex items-center gap-2">
               <div className="w-6 h-6 rounded-full bg-gold-300/20 flex items-center justify-center flex-shrink-0">
@@ -123,9 +191,7 @@ export function VenueHoursClaimed({ stateKey, citySlug, venueSlug, venueName, ve
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
-              <div>
-                <p className="text-sm font-semibold text-gold-300">Claimed Venue</p>
-              </div>
+              <p className="text-sm font-semibold text-gold-300">Claimed Venue</p>
             </div>
           )}
         </div>
