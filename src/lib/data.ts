@@ -23,6 +23,7 @@ export const STATES: Record<string, { name: string; abbr: string; center: [numbe
   ak: { name: 'Alaska', abbr: 'AK', center: [64.2008, -152.4937], zoom: 5 },
   ia: { name: 'Iowa', abbr: 'IA', center: [41.8780, -93.0977], zoom: 7 },
   wi: { name: 'Wisconsin', abbr: 'WI', center: [43.7844, -88.7879], zoom: 7 },
+fl: { name: 'Florida', abbr: 'FL', center: [27.9944, -81.7603], zoom: 7 },
 };
 
 export const VENUE_TYPES: Record<string, { label: string; icon: string; color: string }> = {

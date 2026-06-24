@@ -47,6 +47,22 @@ const nextConfig = {
         destination: '/states/wi/:city',
         permanent: true,
       },
+	{
+  	source: '/fl/:city',
+  	destination: '/states/fl/:city',
+  	permanent: true,
+	},
+       {
+  	source: '/fl/:city/',
+  	destination: '/states/fl/:city',
+  	permanent: true,
+	},
+       {
+  	source: '/fl/:city/:venue',
+  	destination: '/states/fl/:city/:venue',
+  	permanent: true,
+	},
+
       // Redirect old venue URLs if they existed: /mn/afton/venue-name -> /states/mn/afton/venue-name
       {
         source: '/mn/:city/:venue',
@@ -68,6 +84,7 @@ const nextConfig = {
         destination: '/states/wi/:city/:venue',
         permanent: true,
       },
+	
     ];
   },
 };
