@@ -1,3 +1,4 @@
+import { FacebookBanner } from '@/components/FacebookBanner';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -170,7 +171,9 @@ export default function VenuePage({ params }: PageProps) {
               </div>
             </div>
           </div>
-
+	  <div className="mt-6">
+  <FacebookBanner />
+</div>
           <div className="lg:col-span-1 space-y-6">
             <div className="glass rounded-xl overflow-hidden h-64">
               <VenueMapClient lat={location.lat} lng={location.lng} name={location.name} />
