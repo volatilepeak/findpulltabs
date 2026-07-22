@@ -81,6 +81,10 @@ export function Footer() {
                   Contact Us
                 </a>
               </li>
+		<li>
+  <Link href="/creators" className="text-sm text-charcoal-400 hover:text-gold-300 transition-colors">
+    Creators
+  		</Link>
             </ul>
           </div>
         </div>
@@ -93,6 +97,10 @@ export function Footer() {
           <p className="text-xs text-charcoal-600">
             Pull tab gaming supports charitable organizations in your community.
           </p>
+	<p className="text-xs text-charcoal-500 mt-4">
+  If you or someone you know has a gambling problem, call <a href="tel:1-800-522-4700" className="text-charcoal-400 hover:text-gold-300">1-800-522-4700</a> (confidential).
+	</p>
+	</li>
         </div>
       </div>
     </footer>
