@@ -83,14 +83,14 @@ export default function CreatorsPage() {
       {/* Hero */}
       <section className="border-b border-charcoal/10">
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-charcoal/60 font-outfit mb-5">
+          <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-charcoal font-outfit mb-5">
             Community
           </p>
           <h1 className="font-playfair text-4xl md:text-6xl text-charcoal leading-tight">
             Pull Tab Creators to Follow
           </h1>
           <div className="w-16 h-px bg-gold mx-auto my-8" />
-          <p className="font-outfit text-charcoal/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="font-outfit text-charcoal text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             The people, pages, and personalities keeping pull tab culture alive on Facebook.
             Big wins, bar finds, and the kind of content only real players make.
           </p>
@@ -106,20 +106,20 @@ export default function CreatorsPage() {
               href={c.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+              className={`group relative !bg-white border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 c.featured
                   ? 'border-gold shadow-md ring-1 ring-gold/40'
-                  : 'border-charcoal/10 shadow-sm'
+                  : 'border-black/10 shadow-sm'
               }`}
             >
               {c.featured && (
-                <div className="absolute top-3 right-3 z-10 bg-gold text-charcoal text-[10px] font-outfit font-semibold tracking-[0.15em] uppercase px-2.5 py-1 rounded-full">
+                <div className="absolute top-3 right-3 z-10 bg-gold !text-black text-[10px] font-outfit font-semibold tracking-[0.15em] uppercase px-2.5 py-1 rounded-full">
                   Our Page
                 </div>
               )}
 
               {/* Photo */}
-              <div className="relative aspect-square bg-charcoal/5 overflow-hidden">
+              <div className="relative aspect-square bg-black/5 overflow-hidden">
                 <Image
                   src={c.image}
                   alt={c.name}
@@ -129,16 +129,16 @@ export default function CreatorsPage() {
                 />
               </div>
 
-              {/* Text */}
-              <div className="p-6 md:p-7">
-                <h2 className="font-playfair text-2xl text-charcoal leading-tight mb-1">
+              {/* Text — locked to black regardless of light/dark site theme */}
+              <div className="p-6 md:p-7 !bg-white">
+                <h2 className="font-playfair text-2xl !text-black leading-tight mb-1">
                   {c.name}
                 </h2>
-                <p className="font-outfit text-sm text-charcoal/50 mb-4">{c.handle}</p>
-                <p className="font-outfit text-charcoal/75 leading-relaxed text-[15px] mb-5">
+                <p className="font-outfit text-sm !text-black/60 mb-4">{c.handle}</p>
+                <p className="font-outfit !text-black leading-relaxed text-[15px] mb-5">
                   {c.blurb}
                 </p>
-                <span className="inline-flex items-center gap-2 font-outfit text-sm font-medium text-charcoal group-hover:text-gold transition-colors">
+                <span className="inline-flex items-center gap-2 font-outfit text-sm font-semibold !text-black group-hover:!text-[#B8A57A] transition-colors">
                   Follow on Facebook
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -162,8 +162,8 @@ export default function CreatorsPage() {
           <h2 className="font-playfair text-3xl md:text-4xl text-charcoal mb-4">
             Know a creator we missed?
           </h2>
-          <p className="font-outfit text-charcoal/70 text-lg mb-8 leading-relaxed">
-            We're always looking for pull tab pages, communities, and personalities to feature.
+          <p className="font-outfit text-charcoal text-lg mb-8 leading-relaxed">
+            We&apos;re always looking for pull tab pages, communities, and personalities to feature.
             If you make content worth watching, we want to know about it.
           </p>
           <Link
