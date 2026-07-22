@@ -12,37 +12,37 @@ const creators = [
     name: 'The Tab Club',
     url: 'https://www.facebook.com/TheTabClubAndMore',
     description: 'For the thrill. Charitable fun, good times and supporting local along the way.',
-    emoji: '👑',
+    emoji: '\u{1F451}',
   },
   {
     name: 'OnlyTabs',
     url: 'https://www.facebook.com/profile.php?id=61577600641249',
-    description: 'Rip \'em if ya got \'em. One of the biggest pull tab pages on Facebook with nonstop ripping content.',
-    emoji: '💰',
+    description: 'Rip em if ya got em. One of the biggest pull tab pages on Facebook with nonstop ripping content.',
+    emoji: '\u{1F4B0}',
   },
   {
     name: 'World Series of Pull Tabs',
     url: 'https://www.facebook.com/profile.php?id=61578075728136',
-    description: 'Livestreams, community wins, and a page that celebrates players everywhere. Send in your winners and they'll put you on the map.',
-    emoji: '🏆',
+    description: 'Livestreams, community wins, and a page that celebrates players everywhere. Send in your winners and get put on the map.',
+    emoji: '\u{1F3C6}',
   },
   {
     name: 'Twogirlsonehabit',
     url: 'https://www.facebook.com/profile.php?id=61586225740386',
     description: 'Two Minnesota natives looking for luck, chasing boxes, and finding lines. Charity starts local. Also on YouTube and Instagram.',
-    emoji: '🎰',
+    emoji: '\u{1F3B0}',
   },
   {
     name: 'Two Chicks Doing Lines',
     url: 'https://www.facebook.com/2Chicksdoinglines',
-    description: 'Two longtime friends chasing dopamine via charitable gaming. If you've ever said "just one more box," you'll fit right in.',
-    emoji: '👯',
+    description: 'Two longtime friends chasing dopamine via charitable gaming. If you have ever said just one more box, you will fit right in.',
+    emoji: '\u{1F46F}',
   },
   {
     name: 'Minnesota Pulltab Chic',
     url: 'https://www.facebook.com/profile.php?id=61582940405191',
-    description: 'Veteran, pull tab enthusiast, and charitable gambling's biggest fan. Live events, rips, bingo, e-tabs, and Minnesota adventures.',
-    emoji: '🎀',
+    description: 'Veteran, pull tab enthusiast, and charitable gaming at its finest. Live events, rips, bingo, e-tabs, and Minnesota adventures.',
+    emoji: '\u{1F380}',
   },
 ];
 
@@ -110,7 +110,7 @@ export default function CreatorsPage() {
 
         <div className="mt-8">
           <Link href="/about" className="text-sm text-gold-400 hover:text-gold-300 transition-colors">
-            ← Back to About
+            &larr; Back to About
           </Link>
         </div>
       </div>

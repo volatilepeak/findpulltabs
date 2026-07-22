@@ -59,6 +59,12 @@ export function Header() {
               >
                 Submit
               </Link>
+		<Link
+                href="/creators"
+                className="px-3 py-2 text-sm font-medium text-cream-300 hover:text-gold-300 transition-colors rounded-lg hover:bg-white/5"
+              >
+                Creators
+              </Link>
             </nav>
 
             {/* Right side actions */}
@@ -156,6 +162,13 @@ export function Header() {
                 className="block px-3 py-2.5 text-sm font-medium text-cream-200 hover:text-gold-300 hover:bg-white/5 rounded-lg transition-colors"
               >
                 ➕ Submit a Location
+              </Link>
+		<Link
+                href="/creators"
+                onClick={() => setMenuOpen(false)}
+                className="block px-3 py-2.5 text-sm font-medium text-cream-200 hover:text-gold-300 hover:bg-white/5 rounded-lg transition-colors"
+              >
+                Creators
               </Link>
               <div className="pt-2 border-t border-gold-300/10">
                 {user ? (
