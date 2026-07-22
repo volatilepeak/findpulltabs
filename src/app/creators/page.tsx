@@ -27,7 +27,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/TheTabClubAndMore/',
     image: '/creators/tab-club.png',
     blurb:
-      "The home page of pull tab culture — big wins, bar finds, and everything in between. Built by FindPullTabs.com.",
+      'For the thrill. Charitable fun, good times and supporting local along the way.',
     featured: true,
   },
   {
@@ -37,7 +37,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/profile.php?id=61582940405191',
     image: '/creators/mn-pulltab-chic.jpg',
     blurb:
-      "Thumbs up or thumbs down — Minnesota's take on which tabs are worth your money and which bars are worth the drive.",
+      'Veteran, pull tab enthusiast, and charitable gaming at its finest. Live events, rips, bingo, e-tabs, and Minnesota adventures.',
   },
   {
     slug: 'wsopt',
@@ -46,7 +46,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/profile.php?id=61578075728136',
     image: '/creators/wsopt.jpg',
     blurb:
-      'The championship spirit of pull tabs — highlight-reel wins, deep-dive breakdowns, and pull tab content taken seriously.',
+      'Livestreams, community wins, and a page that celebrates players everywhere. Send in your winners and get put on the map.',
   },
   {
     slug: 'onlytabs',
@@ -55,7 +55,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/profile.php?id=61577600641249',
     image: '/creators/onlytabs.jpg',
     blurb:
-      'Wearing his winnings. Chasing the big hits and documenting the chase — one bar, one box, one bill lei at a time.',
+      'Rip em if ya got em. One of the biggest pull tab pages on Facebook with nonstop ripping content.',
   },
   {
     slug: 'twogirlsonehabit',
@@ -64,7 +64,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/profile.php?id=61586225740386',
     image: '/creators/twogirlsonehabit.jpg',
     blurb:
-      'Lake days, good vibes, big wins, best company. Minnesota pull tab life through the eyes of two friends who found their game.',
+      'Two Minnesota natives looking for luck, chasing boxes, and finding lines. Charity starts local. Also on YouTube and Instagram.',
   },
   {
     slug: 'two-chicks',
@@ -73,7 +73,7 @@ const creators: Creator[] = [
     url: 'https://www.facebook.com/2Chicksdoinglines',
     image: '/creators/two-chicks.jpg',
     blurb:
-      'Line games, cocktails, and the kind of nights that make for a good story the next morning. Pull tabs with personality.',
+      'Two longtime friends chasing dopamine via charitable gaming. If you have ever said just one more box, you will fit right in.',
   },
 ];
 
