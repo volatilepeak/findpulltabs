@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-display font-semibold text-gold-300">FindPullTabs</span>
             </Link>
             <p className="text-sm text-charcoal-400 leading-relaxed">
-              The most comprehensive pull tab location directory. Find 3,300+ venues across four states.
+              The most comprehensive pull tab location directory. Find 3,700+ venues across five states.
             </p>
           </div>
 
@@ -81,10 +81,11 @@ export function Footer() {
                   Contact Us
                 </a>
               </li>
-		<li>
-  <Link href="/creators" className="text-sm text-charcoal-400 hover:text-gold-300 transition-colors">
-    Creators
-  		</Link>
+              <li>
+                <Link href="/creators" className="text-sm text-charcoal-400 hover:text-gold-300 transition-colors">
+                  Creators
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -97,10 +98,9 @@ export function Footer() {
           <p className="text-xs text-charcoal-600">
             Pull tab gaming supports charitable organizations in your community.
           </p>
-	<p className="text-xs text-charcoal-500 mt-4">
-  If you or someone you know has a gambling problem, call <a href="tel:1-800-522-4700" className="text-charcoal-400 hover:text-gold-300">1-800-522-4700</a> (confidential).
-	</p>
-	</li>
+          <p className="text-xs text-charcoal-500">
+            If you or someone you know has a gambling problem, call <a href="tel:1-800-522-4700" className="text-charcoal-400 hover:text-gold-300">1-800-522-4700</a> (confidential).
+          </p>
         </div>
       </div>
     </footer>
