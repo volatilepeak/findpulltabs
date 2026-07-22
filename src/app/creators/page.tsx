@@ -1,119 +1,179 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Pull Tab Creators — The Community Behind the Tabs | FindPullTabs',
-  description: 'Meet the pull tab content creators keeping the charitable gaming community entertained. Follow them on Facebook for rips, wins, losses, and good times.',
+  title: 'Pull Tab Creators to Follow | FindPullTabs.com',
+  description:
+    'A curated list of the best pull tab creators, communities, and personalities to follow on Facebook. Big wins, bar stories, and pull tab culture.',
   alternates: { canonical: 'https://findpulltabs.com/creators' },
 };
 
-const creators = [
+type Creator = {
+  slug: string;
+  name: string;
+  handle: string;
+  url: string;
+  image: string;
+  blurb: string;
+  featured?: boolean;
+};
+
+const creators: Creator[] = [
   {
+    slug: 'tab-club',
     name: 'The Tab Club',
-    url: 'https://www.facebook.com/TheTabClubAndMore',
-    description: 'For the thrill. Charitable fun, good times and supporting local along the way.',
-    emoji: '\u{1F451}',
+    handle: '@TheTabClubAndMore',
+    url: 'https://www.facebook.com/TheTabClubAndMore/',
+    image: '/creators/tab-club.png',
+    blurb:
+      "The home page of pull tab culture — big wins, bar finds, and everything in between. Built by FindPullTabs.com.",
+    featured: true,
   },
   {
-    name: 'OnlyTabs',
-    url: 'https://www.facebook.com/profile.php?id=61577600641249',
-    description: 'Rip em if ya got em. One of the biggest pull tab pages on Facebook with nonstop ripping content.',
-    emoji: '\u{1F4B0}',
-  },
-  {
-    name: 'World Series of Pull Tabs',
-    url: 'https://www.facebook.com/profile.php?id=61578075728136',
-    description: 'Livestreams, community wins, and a page that celebrates players everywhere. Send in your winners and get put on the map.',
-    emoji: '\u{1F3C6}',
-  },
-  {
-    name: 'Twogirlsonehabit',
-    url: 'https://www.facebook.com/profile.php?id=61586225740386',
-    description: 'Two Minnesota natives looking for luck, chasing boxes, and finding lines. Charity starts local. Also on YouTube and Instagram.',
-    emoji: '\u{1F3B0}',
-  },
-  {
-    name: 'Two Chicks Doing Lines',
-    url: 'https://www.facebook.com/2Chicksdoinglines',
-    description: 'Two longtime friends chasing dopamine via charitable gaming. If you have ever said just one more box, you will fit right in.',
-    emoji: '\u{1F46F}',
-  },
-  {
+    slug: 'mn-pulltab-chic',
     name: 'Minnesota Pulltab Chic',
+    handle: 'Facebook Page',
     url: 'https://www.facebook.com/profile.php?id=61582940405191',
-    description: 'Veteran, pull tab enthusiast, and charitable gaming at its finest. Live events, rips, bingo, e-tabs, and Minnesota adventures.',
-    emoji: '\u{1F380}',
+    image: '/creators/mn-pulltab-chic.jpg',
+    blurb:
+      "Thumbs up or thumbs down — Minnesota's take on which tabs are worth your money and which bars are worth the drive.",
+  },
+  {
+    slug: 'wsopt',
+    name: 'World Series of Pull Tabs',
+    handle: 'Facebook Page',
+    url: 'https://www.facebook.com/profile.php?id=61578075728136',
+    image: '/creators/wsopt.jpg',
+    blurb:
+      'The championship spirit of pull tabs — highlight-reel wins, deep-dive breakdowns, and pull tab content taken seriously.',
+  },
+  {
+    slug: 'onlytabs',
+    name: 'OnlyTabs',
+    handle: 'Facebook Page',
+    url: 'https://www.facebook.com/profile.php?id=61577600641249',
+    image: '/creators/onlytabs.jpg',
+    blurb:
+      'Wearing his winnings. Chasing the big hits and documenting the chase — one bar, one box, one bill lei at a time.',
+  },
+  {
+    slug: 'twogirlsonehabit',
+    name: 'Two Girls One Habit',
+    handle: 'Facebook Page',
+    url: 'https://www.facebook.com/profile.php?id=61586225740386',
+    image: '/creators/twogirlsonehabit.jpg',
+    blurb:
+      'Lake days, good vibes, big wins, best company. Minnesota pull tab life through the eyes of two friends who found their game.',
+  },
+  {
+    slug: 'two-chicks',
+    name: '2 Chicks Doing Lines',
+    handle: '@2Chicksdoinglines',
+    url: 'https://www.facebook.com/2Chicksdoinglines',
+    image: '/creators/two-chicks.jpg',
+    blurb:
+      'Line games, cocktails, and the kind of nights that make for a good story the next morning. Pull tabs with personality.',
   },
 ];
 
 export default function CreatorsPage() {
   return (
-    <div className="bg-charcoal-950 min-h-screen">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-        <nav className="flex items-center gap-2 text-sm text-charcoal-400 mb-8">
-          <Link href="/" className="hover:text-gold-300 transition-colors">Home</Link>
-          <span>/</span>
-          <span className="text-cream-300">Creators</span>
-        </nav>
+    <div className="bg-cream min-h-screen">
+      {/* Hero */}
+      <section className="border-b border-charcoal/10">
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 text-center">
+          <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-charcoal/60 font-outfit mb-5">
+            Community
+          </p>
+          <h1 className="font-playfair text-4xl md:text-6xl text-charcoal leading-tight">
+            Pull Tab Creators to Follow
+          </h1>
+          <div className="w-16 h-px bg-gold mx-auto my-8" />
+          <p className="font-outfit text-charcoal/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            The people, pages, and personalities keeping pull tab culture alive on Facebook.
+            Big wins, bar finds, and the kind of content only real players make.
+          </p>
+        </div>
+      </section>
 
-        <h1 className="font-display text-3xl sm:text-4xl font-bold text-cream-200 mb-3">
-          Pull Tab Creators
-        </h1>
-        <p className="text-charcoal-300 text-sm leading-relaxed mb-10">
-          The pull tab community on Facebook is growing fast. These creators are putting out
-          great content — ripping tabs, sharing wins and losses, going live, and keeping the
-          charitable gaming community entertained. Give them a follow.
-        </p>
-
-        <div className="space-y-4">
-          {creators.map((creator) => (
+      {/* Grid */}
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          {creators.map((c) => (
             <a
-              key={creator.name}
-              href={creator.url}
+              key={c.slug}
+              href={c.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block glass rounded-xl p-6 border border-charcoal-800 hover:border-gold-300/30 transition-all group"
+              className={`group relative bg-white border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                c.featured
+                  ? 'border-gold shadow-md ring-1 ring-gold/40'
+                  : 'border-charcoal/10 shadow-sm'
+              }`}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-charcoal-800 flex items-center justify-center flex-shrink-0 text-2xl group-hover:bg-gold-300/10 transition-colors">
-                  {creator.emoji}
+              {c.featured && (
+                <div className="absolute top-3 right-3 z-10 bg-gold text-charcoal text-[10px] font-outfit font-semibold tracking-[0.15em] uppercase px-2.5 py-1 rounded-full">
+                  Our Page
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h2 className="text-lg font-semibold text-cream-200 group-hover:text-gold-300 transition-colors">
-                      {creator.name}
-                    </h2>
-                    <svg className="w-4 h-4 text-charcoal-500 group-hover:text-gold-300 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-charcoal-400 leading-relaxed">{creator.description}</p>
-                </div>
+              )}
+
+              {/* Photo */}
+              <div className="relative aspect-square bg-charcoal/5 overflow-hidden">
+                <Image
+                  src={c.image}
+                  alt={c.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="p-6 md:p-7">
+                <h2 className="font-playfair text-2xl text-charcoal leading-tight mb-1">
+                  {c.name}
+                </h2>
+                <p className="font-outfit text-sm text-charcoal/50 mb-4">{c.handle}</p>
+                <p className="font-outfit text-charcoal/75 leading-relaxed text-[15px] mb-5">
+                  {c.blurb}
+                </p>
+                <span className="inline-flex items-center gap-2 font-outfit text-sm font-medium text-charcoal group-hover:text-gold transition-colors">
+                  Follow on Facebook
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </div>
             </a>
           ))}
         </div>
+      </section>
 
-        <div className="mt-12 glass rounded-xl p-6 border border-gold-300/15">
-          <h3 className="font-display text-lg font-semibold text-cream-200 mb-2">Are you a pull tab creator?</h3>
-          <p className="text-sm text-charcoal-400 mb-4">
-            We&apos;re always looking to feature more creators in the pull tab community.
-            If you run a page and want to be listed here, reach out.
+      {/* Submit CTA */}
+      <section className="border-t border-charcoal/10 bg-white">
+        <div className="max-w-3xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl text-charcoal mb-4">
+            Know a creator we missed?
+          </h2>
+          <p className="font-outfit text-charcoal/70 text-lg mb-8 leading-relaxed">
+            We're always looking for pull tab pages, communities, and personalities to feature.
+            If you make content worth watching, we want to know about it.
           </p>
-          <a
-            href="mailto:badtabits@gmail.com?subject=Creator Feature Request"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-charcoal-900 bg-gold-300 hover:bg-gold-400 rounded-lg transition-colors"
+          <Link
+            href="/submit"
+            className="inline-block bg-charcoal text-cream font-outfit font-medium tracking-wide px-8 py-3.5 rounded-full hover:bg-gold hover:text-charcoal transition-colors"
           >
-            Get in Touch
-          </a>
-        </div>
-
-        <div className="mt-8">
-          <Link href="/about" className="text-sm text-gold-400 hover:text-gold-300 transition-colors">
-            &larr; Back to About
+            Submit a Creator
           </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
